@@ -1,78 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="manus.css" rel="stylesheet">
     <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      .slide-container { 
-        width: 1280px; 
-        min-height: 720px; 
-        background: #002D62; 
-        font-family: 'Open Sans', sans-serif;
-        display: flex;
+      /* Slide-specific styles */
+      .slide-container {
+        background: var(--color-primary);
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        overflow: hidden;
-        color: #FFFFFF;
+        color: var(--color-white);
       }
+      
       .header-section {
         text-align: center;
         margin-bottom: 60px;
       }
+      
       h2 {
-        font-family: 'Montserrat', sans-serif;
         font-size: 56px;
-        font-weight: 800;
-        text-transform: uppercase;
-        line-height: 1.1;
-        margin-bottom: 20px;
+        color: var(--color-white);
       }
+      
       h2 span {
-        color: #C41E3A;
+        color: var(--color-accent);
       }
+      
       .subtitle {
-        font-family: 'Montserrat', sans-serif;
         font-size: 24px;
-        font-weight: 600;
-        color: #89CFF0;
+        color: var(--color-secondary);
         text-transform: uppercase;
         letter-spacing: 2px;
-      }
-      .problem-grid {
-        display: flex;
-        justify-content: space-evenly;
-        width: 100%;
-        padding-top: 40px;
-      }
-      .problem-item {
-        width: 350px;
-        text-align: center;
-        padding-top: 20px;
-      }
-      .icon-box {
-        font-size: 48px;
-        color: #C41E3A;
-        margin-bottom: 25px;
-      }
-      .problem-title {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 24px;
-        font-weight: 700;
-        margin-bottom: 15px;
-        color: #FFFFFF;
-      }
-      .problem-text {
-        font-size: 18px;
-        line-height: 1.6;
-        color: #E0E0E0;
-      }
-      .accent-bar {
-        width: 120px;
-        height: 6px;
-        background: #C41E3A;
-        margin: 20px auto;
       }
     </style>
 </head>

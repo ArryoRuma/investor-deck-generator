@@ -1,18 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="manus.css" rel="stylesheet">
     <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      .slide-container { 
-        width: 1280px; 
-        min-height: 720px; 
-        background: #FFFFFF; 
-        font-family: 'Open Sans', sans-serif;
-        display: flex;
-        overflow: hidden;
-      }
       .content-side {
         flex: 1;
         padding-top: 60px;
@@ -34,19 +25,10 @@
         object-fit: cover;
       }
       h2 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 48px;
-        font-weight: 800;
-        color: #002D62;
-        text-transform: uppercase;
-        line-height: 1.1;
         margin-bottom: 10px;
       }
       .accent-line {
         width: 80px;
-        height: 8px;
-        background: #C41E3A;
-        margin-bottom: 40px;
       }
       .solution-points {
         display: flex;
@@ -61,7 +43,7 @@
       }
       .point-icon {
         font-size: 28px;
-        color: #C41E3A;
+        color: var(--color-accent);
         width: 40px;
         text-align: center;
       }
@@ -69,30 +51,29 @@
         flex: 1;
       }
       .point-title {
-        font-family: 'Montserrat', sans-serif;
+        font-family: var(--font-display);
         font-size: 22px;
         font-weight: 700;
-        color: #002D62;
+        color: var(--color-primary);
         margin-bottom: 5px;
       }
       .point-text {
         font-size: 18px;
-        color: #333333;
+        color: var(--color-text);
         line-height: 1.5;
       }
       .highlight-box {
         margin-top: auto;
         padding-top: 30px;
-        /* reduced bottom padding to remove overflow */
         padding-bottom: 30px;
       }
       .lease-badge {
         display: inline-block;
-        background: #89CFF0;
-        color: #002D62;
+        background: var(--color-secondary);
+        color: var(--color-primary);
         padding: 10px 20px;
         font-weight: 700;
-        font-family: 'Montserrat', sans-serif;
+        font-family: var(--font-display);
         text-transform: uppercase;
         letter-spacing: 1px;
       }

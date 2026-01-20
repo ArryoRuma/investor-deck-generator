@@ -1,38 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="manus.css" rel="stylesheet">
     <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
       .slide-container { 
-        width: 1280px; 
-        min-height: 720px; 
-        background: #FFFFFF; 
-        font-family: 'Open Sans', sans-serif;
-        display: flex;
         flex-direction: column;
-        overflow: hidden;
       }
       .header {
-        background: #002D62;
+        background: var(--color-primary);
         padding-top: 60px;
         padding-left: 60px;
         padding-right: 60px;
         height: 200px;
       }
       h2 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 48px;
-        font-weight: 800;
-        color: #FFFFFF;
-        text-transform: uppercase;
-        line-height: 1.1;
+        color: var(--color-white);
       }
       .accent-line {
         width: 120px;
-        height: 8px;
-        background: #C41E3A;
         margin-top: 20px;
       }
       .revenue-grid {
@@ -49,10 +35,10 @@
         padding-top: 20px;
       }
       .revenue-title {
-        font-family: 'Montserrat', sans-serif;
+        font-family: var(--font-display);
         font-size: 24px;
         font-weight: 700;
-        color: #002D62;
+        color: var(--color-primary);
         text-transform: uppercase;
         margin-bottom: 10px;
         display: flex;
@@ -60,23 +46,23 @@
       }
       .revenue-title i {
         margin-right: 15px;
-        color: #C41E3A;
+        color: var(--color-accent);
       }
       .revenue-metric {
-        font-family: 'Montserrat', sans-serif;
+        font-family: var(--font-display);
         font-size: 36px;
         font-weight: 800;
-        color: #C41E3A;
+        color: var(--color-accent);
         margin-bottom: 10px;
       }
       .revenue-detail {
         font-size: 18px;
-        color: #333333;
+        color: var(--color-text);
         line-height: 1.5;
       }
       .revenue-detail span {
         font-weight: 600;
-        color: #002D62;
+        color: var(--color-primary);
       }
     </style>
 </head>
