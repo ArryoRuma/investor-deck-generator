@@ -11,8 +11,16 @@
   --color-white: #FFFFFF;
   --color-text: #333333;
   --color-text-light: #666666;
+  --color-text-dark: #111827;
+  --color-text-medium: #374151;
   --color-border: #E0E0E0;
   --color-bg-light: #F8F9FA;
+  --color-bg-hover: #f9fafb;
+  
+  /* Category Colors for Charts/Tables */
+  --color-category-1: #1e40af;  /* Blue */
+  --color-category-2: #4b5563;  /* Gray */
+  --color-category-3: #d97706;  /* Orange */
   
   --font-display: 'Montserrat', sans-serif;
   --font-body: 'Open Sans', sans-serif;

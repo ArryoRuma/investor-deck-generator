@@ -47,7 +47,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
-        background: white;
+        background: var(--color-white);
         padding: 2rem;
         border-radius: 50%;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
@@ -92,7 +92,7 @@
       }
       
       .budget-table-container {
-        background: white;
+        background: var(--color-white);
         border-radius: 12px;
         box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
         overflow: hidden;
@@ -125,7 +125,7 @@
       }
       
       .budget-row:hover {
-        background-color: #f9fafb;
+        background-color: var(--color-bg-hover);
       }
       
       .budget-row:last-child {
@@ -146,7 +146,7 @@
       .category-name {
         flex: 1;
         font-weight: 600;
-        color: #374151;
+        color: var(--color-text-medium);
       }
       
       .category-subtext {
@@ -160,7 +160,7 @@
         font-family: var(--font-display);
         font-weight: 700;
         font-size: 20px;
-        color: #111827;
+        color: var(--color-text-dark);
         text-align: right;
         min-width: 120px;
       }
@@ -261,8 +261,8 @@
                     </div>
                     
                     <!-- Row 3: Buildings -->
-                    <div class="budget-row" style="border-left: 4px solid var(--color-secondary);">
-                        <div class="row-icon" style="background-color: rgba(137, 207, 240, 0.2); color: #1e40af;">
+                    <div class="budget-row" style="border-left: 4px solid var(--color-category-1);">
+                        <div class="row-icon" style="background-color: rgba(30, 64, 175, 0.2); color: var(--color-category-1);">
                             <i class="fas fa-warehouse"></i>
                         </div>
                         <div class="category-name">
@@ -271,13 +271,13 @@
                         </div>
                         <div class="budget-amount">$307,000</div>
                         <div class="percentage-bar">
-                            <div class="percentage-fill" style="width: 12%; background-color: #1e40af;"></div>
+                            <div class="percentage-fill" style="width: 12%; background-color: var(--color-category-1);"></div>
                         </div>
                     </div>
                     
                     <!-- Row 4: Infrastructure -->
-                    <div class="budget-row" style="border-left: 4px solid #4b5563;">
-                        <div class="row-icon" style="background-color: rgba(75, 85, 99, 0.1); color: #4b5563;">
+                    <div class="budget-row" style="border-left: 4px solid var(--color-category-2);">
+                        <div class="row-icon" style="background-color: rgba(75, 85, 99, 0.1); color: var(--color-category-2);">
                             <i class="fas fa-bolt"></i>
                         </div>
                         <div class="category-name">
@@ -286,13 +286,13 @@
                         </div>
                         <div class="budget-amount">$359,179</div>
                         <div class="percentage-bar">
-                            <div class="percentage-fill" style="width: 14%; background-color: #4b5563;"></div>
+                            <div class="percentage-fill" style="width: 14%; background-color: var(--color-category-2);"></div>
                         </div>
                     </div>
                     
                     <!-- Row 5: Reserves & Financing -->
-                    <div class="budget-row" style="border-left: 4px solid #d97706;">
-                        <div class="row-icon" style="background-color: rgba(217, 119, 6, 0.1); color: #d97706;">
+                    <div class="budget-row" style="border-left: 4px solid var(--color-category-3);">
+                        <div class="row-icon" style="background-color: rgba(217, 119, 6, 0.1); color: var(--color-category-3);">
                             <i class="fas fa-file-contract"></i>
                         </div>
                         <div class="category-name">
@@ -301,7 +301,7 @@
                         </div>
                         <div class="budget-amount">$428,054</div>
                         <div class="percentage-bar">
-                            <div class="percentage-fill" style="width: 17%; background-color: #d97706;"></div>
+                            <div class="percentage-fill" style="width: 17%; background-color: var(--color-category-3);"></div>
                         </div>
                     </div>
                     
@@ -319,10 +319,17 @@
         document.addEventListener('DOMContentLoaded', function () {
             var chartDom = document.getElementById('budgetChart');
             var myChart = echarts.init(chartDom);
-            var option;
-
-            option = {
-                color: ['#C41E3A', '#002D62', '#1e40af', '#4b5563', '#d97706'],
+            
+            // Get CSS variable colors
+            const styles = getComputedStyle(document.documentElement);
+            const colorAccent = styles.getPropertyValue('--color-accent').trim();
+            const colorPrimary = styles.getPropertyValue('--color-primary').trim();
+            const colorCategory1 = styles.getPropertyValue('--color-category-1').trim();
+            const colorCategory2 = styles.getPropertyValue('--color-category-2').trim();
+            const colorCategory3 = styles.getPropertyValue('--color-category-3').trim();
+            
+            var option = {
+                color: [colorAccent, colorPrimary, colorCategory1, colorCategory2, colorCategory3],
                 tooltip: {
                     trigger: 'item',
                     formatter: '{b}: {d}%'
