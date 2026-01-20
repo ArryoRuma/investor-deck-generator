@@ -22,6 +22,13 @@
   --color-category-2: #4b5563;  /* Gray */
   --color-category-3: #d97706;  /* Orange */
   
+  /* Semi-transparent Icon Backgrounds */
+  --color-accent-bg: rgba(196, 30, 58, 0.1);
+  --color-primary-bg: rgba(0, 45, 98, 0.1);
+  --color-category-1-bg: rgba(30, 64, 175, 0.2);
+  --color-category-2-bg: rgba(75, 85, 99, 0.1);
+  --color-category-3-bg: rgba(217, 119, 6, 0.1);
+  
   --font-display: 'Montserrat', sans-serif;
   --font-body: 'Open Sans', sans-serif;
 }
