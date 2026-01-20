@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container { 
+        width: 1280px; 
+        min-height: 720px; 
+        background: #FFFFFF; 
+        font-family: 'Open Sans', sans-serif;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      .header-section {
+        padding-top: 60px;
+        padding-left: 80px;
+        margin-bottom: 40px;
+      }
+      h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 48px;
+        font-weight: 800;
+        color: #002D62;
+        text-transform: uppercase;
+        line-height: 1.1;
+      }
+      .accent-line {
+        width: 120px;
+        height: 8px;
+        background: #C41E3A;
+        margin-top: 15px;
+      }
+      .main-content {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 60px;
+        padding-left: 80px;
+        padding-right: 80px;
+      }
+      .budget-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 18px;
+      }
+      .budget-table th {
+        text-align: left;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        color: #002D62;
+        padding-top: 15px;
+        border-bottom: 3px solid #002D62;
+        text-transform: uppercase;
+      }
+      .budget-table td {
+        padding-top: 15px;
+        border-bottom: 1px solid #E0E0E0;
+        color: #333;
+      }
+      .budget-table .amount {
+        text-align: right;
+        font-weight: 600;
+        color: #C41E3A;
+      }
+      .total-row td {
+        border-bottom: none;
+        padding-top: 20px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+        font-weight: 800;
+        color: #002D62;
+      }
+      .total-row .amount {
+        color: #002D62;
+      }
+      .highlights-section {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+      .highlight-box {
+        padding-top: 20px;
+        border-top: 4px solid #89CFF0;
+      }
+      .highlight-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: #002D62;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+      .highlight-text {
+        font-size: 18px;
+        line-height: 1.5;
+        color: #555;
+      }
+      .highlight-text b {
+        color: #C41E3A;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header-section">
+            <h2>Phase 1 Investment<br>& Budget Overview</h2>
+            <div class="accent-line"></div>
+        </div>
+        
+        <div class="main-content">
+            <div class="table-column">
+                <table class="budget-table">
+                    <thead>
+                        <tr>
+                            <th>Allocation Category</th>
+                            <th class="amount">Amount (USD)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Land Acquisition (17.71 Acres)</td>
+                            <td class="amount">$470,000</td>
+                        </tr>
+                        <tr>
+                            <td>Field Construction (Fields 1, 2, 3)</td>
+                            <td class="amount">$935,900</td>
+                        </tr>
+                        <tr>
+                            <td>Main Building (30x140)</td>
+                            <td class="amount">$235,000</td>
+                        </tr>
+                        <tr>
+                            <td>Lighting Systems</td>
+                            <td class="amount">$130,800</td>
+                        </tr>
+                        <tr>
+                            <td>Preferred Return (Construction Phase)</td>
+                            <td class="amount">$193,337</td>
+                        </tr>
+                        <tr>
+                            <td>Equipment, Infrastructure & Other</td>
+                            <td class="amount">$393,580</td>
+                        </tr>
+                        <tr>
+                            <td>Contingency Fund</td>
+                            <td class="amount">$141,517</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td>Total Capital Requirement</td>
+                            <td class="amount">$2,500,133</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="highlights-section">
+                <div class="highlight-box">
+                    <div class="highlight-title">Asset Backing</div>
+                    <div class="highlight-text">
+                        Investors hold <b>70% ownership shares</b> of the LLC which owns the facility, land, and all improvements.
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-title">Financial Prudence</div>
+                    <div class="highlight-text">
+                        Budget includes a <b>$141k contingency</b> and pre-funded preferred returns to ensure stability during the 12-month build-out.
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-title">Strategic Value</div>
+                    <div class="highlight-text">
+                        The investment secures a prime <b>17.71-acre</b> location in the high-growth North Texas corridor.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

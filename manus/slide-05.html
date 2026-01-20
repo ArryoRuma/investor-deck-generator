@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container { 
+        width: 1280px; 
+        min-height: 720px; 
+        background: #FFFFFF; 
+        font-family: 'Open Sans', sans-serif;
+        display: flex;
+        overflow: hidden;
+      }
+      .image-side {
+        width: 600px;
+        height: 700px; /* reduced so column is under 720 */
+        position: relative;
+      }
+      .image-side img {
+        width: 600px;
+        height: 700px; /* match image-side */
+        object-fit: cover;
+      }
+      .content-side {
+        flex: 1;
+        padding-top: 60px; /* keep upper padding of title */
+        padding-left: 60px;
+        padding-right: 60px;
+        display: flex;
+        flex-direction: column;
+      }
+      h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 44px;
+        font-weight: 800;
+        color: #002D62;
+        text-transform: uppercase;
+        line-height: 1.1;
+        margin-bottom: 12px; /* reduced spacing after title */
+      }
+      .phase-container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px; /* reduced gap between phase blocks */
+      }
+      .phase-block {
+        padding-top: 4px; /* shrink inner padding */
+      }
+      .phase-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .phase-number {
+        background: #C41E3A;
+        color: #FFFFFF;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 800;
+        font-size: 24px;
+        width: 120px;
+        height: 36px; /* slightly reduced but still fits font */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+      }
+      .phase-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        color: #002D62;
+      }
+      .phase-list {
+        list-style: none;
+        padding-left: 20px;
+        border-left: 3px solid #89CFF0;
+      }
+      .phase-list li {
+        font-size: 18px;
+        color: #333333;
+        margin-bottom: 4px; /* reduced spacing between list items */
+        line-height: 1.4;
+      }
+      .efficiency-note {
+        margin-top: auto;
+        padding-top: 8px; /* reduced */
+        padding-bottom: 12px; /* reduced */
+        font-style: italic;
+        color: #666;
+        font-size: 18px;
+        border-top: 1px solid #EEE;
+      }
+      .efficiency-note strong {
+        color: #C41E3A;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="image-side">
+            <img src="https://private-us-east-1.manuscdn.com/sessionFile/am19kZadmNV02PwqPG3VTh/sandbox/slides_resource_ia0fpfzo3y9bp6fr206sl-b3bdb02c-e2b-prod-us1_1768934924421_na1fn_L2hvbWUvdWJ1bnR1L3VwbG9hZC9zZWFyY2hfaW1hZ2VzLzEyWGtiMWtKd054dA.jpg?x-oss-process=image/resize,w_1560,h_1560/format,webp&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvYW0xOWtaYWRtTlYwMlB3cVBHM1ZUaC9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9pYTBmcGZ6bzN5OWJwNmZyMjA2c2wtYjNiZGIwMmMtZTJiLXByb2QtdXMxXzE3Njg5MzQ5MjQ0MjFfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzVndiRzloWkM5elpXRnlZMmhmYVcxaFoyVnpMekV5V0d0aU1XdEtkMDU0ZEEuanBnP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTU2MCxoXzE1NjAvZm9ybWF0LHdlYnAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=NMZ3Rg3HEYdXvX2s3BOLA4AytN0oEE-44WSS2RqSy4~gznmIVnpS2szyC92nXINiXLSkfa-XtPM3r4thCqKxGhPsNC2zJXn-3uhavbponIUG9myoAm~Bm1S03~dfyElN7OBywSg1w3KetQibDLcfnOb5BL13rkZZCOiK~UfaLx6scpkQjX4Tgrfg4WWwiwuFL7K8hV0IlwmnloYDM0jtfs5g80mdTqmXfqKoRnj8nGB05SjyDhwBm43gAPcKmvRwdeOMoUszc1PbUTE1DHXZY2loYSTfkUDuIKPLPKrkMRCLbTphrLEftYK~z7Z2-SgTXXTC1NzKnTBa5nBRMaHu-w__" alt="Multi-phase Sports Complex Aerial">
+        </div>
+        <div class="content-side">
+            <h2>Strategic Multi-Phase<br>Development</h2>
+            
+            <div class="phase-container">
+                <div class="phase-block">
+                    <div class="phase-header">
+                        <div class="phase-number">PHASE 1</div>
+                        <div class="phase-title">Foundation & Launch</div>
+                    </div>
+                    <ul class="phase-list">
+                        <li>Construction of initial 3 professional-grade fields</li>
+                        <li>Development of core infrastructure & parking</li>
+                        <li>Launch of revenue-generating Cages & Concessions</li>
+                        <li>Remodel of existing facility house for operations</li>
+                    </ul>
+                </div>
+
+                <div class="phase-block">
+                    <div class="phase-header">
+                        <div class="phase-number">PHASE 2</div>
+                        <div class="phase-title">Expansion & Scale</div>
+                    </div>
+                    <ul class="phase-list">
+                        <li>Addition of Fields 4, 5, and 6 to double capacity</li>
+                        <li>Enhanced tournament hosting capabilities</li>
+                        <li>Increased weekday rental throughput</li>
+                        <li>Full stabilization of the 17.71-acre complex</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="efficiency-note">
+                <strong>Capital Efficiency:</strong> Phase 2 will be funded through a cash-out refinance of the Phase 1 asset, minimizing additional equity requirements.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

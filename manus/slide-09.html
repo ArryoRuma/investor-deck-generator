@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container { 
+        width: 1280px; 
+        min-height: 720px; 
+        background: #FFFFFF; 
+        font-family: 'Open Sans', sans-serif;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      .header-section {
+        padding-top: 60px;
+        padding-left: 80px;
+        margin-bottom: 40px;
+      }
+      h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 48px;
+        font-weight: 800;
+        color: #002D62;
+        text-transform: uppercase;
+        line-height: 1.1;
+      }
+      .accent-line {
+        width: 120px;
+        height: 8px;
+        background: #C41E3A;
+        margin-top: 15px;
+      }
+      .main-content {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 60px;
+        padding-left: 80px;
+        padding-right: 80px;
+      }
+      .tiers-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 18px;
+      }
+      .tiers-table th {
+        text-align: left;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        color: #002D62;
+        padding-top: 15px;
+        border-bottom: 3px solid #002D62;
+        text-transform: uppercase;
+      }
+      .tiers-table td {
+        padding-top: 15px;
+        border-bottom: 1px solid #E0E0E0;
+        color: #333;
+      }
+      .tiers-table .highlight {
+        font-weight: 700;
+        color: #C41E3A;
+      }
+      .benefits-section {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+      .benefit-box {
+        padding-top: 20px;
+        border-top: 4px solid #89CFF0;
+      }
+      .benefit-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: #002D62;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+      .benefit-text {
+        font-size: 18px;
+        line-height: 1.5;
+        color: #555;
+      }
+      .benefit-text b {
+        color: #C41E3A;
+      }
+      .asset-value {
+        margin-top: auto;
+        padding-top: 40px;
+        padding-bottom: 60px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+        font-weight: 800;
+        color: #002D62;
+        text-transform: uppercase;
+      }
+      .asset-value span {
+        color: #C41E3A;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header-section">
+            <h2>Ownership Opportunities<br>& Tax Benefits</h2>
+            <div class="accent-line"></div>
+        </div>
+        
+        <div class="main-content">
+            <div class="table-column">
+                <table class="tiers-table">
+                    <thead>
+                        <tr>
+                            <th>Investment</th>
+                            <th>Equity %</th>
+                            <th>Yearly Min</th>
+                            <th>Final Expected</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>$100,000</td>
+                            <td>2%</td>
+                            <td>$8,000</td>
+                            <td class="highlight">$12,000</td>
+                        </tr>
+                        <tr>
+                            <td>$200,000</td>
+                            <td>5%</td>
+                            <td>$16,000</td>
+                            <td class="highlight">$30,000</td>
+                        </tr>
+                        <tr>
+                            <td>$300,000</td>
+                            <td>8%</td>
+                            <td>$24,000</td>
+                            <td class="highlight">$48,000</td>
+                        </tr>
+                        <tr>
+                            <td>$400,000</td>
+                            <td>12%</td>
+                            <td>$32,000</td>
+                            <td class="highlight">$72,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="asset-value">Projected Asset Value: <span>$6,000,000</span></div>
+            </div>
+            
+            <div class="benefits-section">
+                <div class="benefit-box">
+                    <div class="benefit-title">Tax Efficiency</div>
+                    <div class="benefit-text">
+                        Significant <b>depreciation benefits</b> (approx. $100k for a 5% owner in Year 1) to offset taxable income.
+                    </div>
+                </div>
+                
+                <div class="benefit-box">
+                    <div class="benefit-title">Equity Growth</div>
+                    <div class="benefit-text">
+                        Investors retain their <b>70% equity stake</b> in the stabilized asset even after initial capital is returned.
+                    </div>
+                </div>
+                
+                <div class="benefit-box">
+                    <div class="benefit-title">Triple Net Profit</div>
+                    <div class="benefit-text">
+                        The complex is projected to produce <b>$600,000</b> in triple net profit annually upon full stabilization.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

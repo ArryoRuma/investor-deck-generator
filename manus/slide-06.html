@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container { 
+        width: 1280px; 
+        min-height: 720px; 
+        background: #FFFFFF; 
+        font-family: 'Open Sans', sans-serif;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      .header {
+        background: #002D62;
+        padding-top: 60px;
+        padding-left: 60px;
+        padding-right: 60px;
+        height: 200px;
+      }
+      h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 48px;
+        font-weight: 800;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        line-height: 1.1;
+      }
+      .accent-line {
+        width: 120px;
+        height: 8px;
+        background: #C41E3A;
+        margin-top: 20px;
+      }
+      .revenue-grid {
+        flex: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 40px;
+        padding-top: 40px;
+        padding-left: 60px;
+        padding-right: 60px;
+      }
+      .revenue-item {
+        padding-top: 20px;
+      }
+      .revenue-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        color: #002D62;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+      }
+      .revenue-title i {
+        margin-right: 15px;
+        color: #C41E3A;
+      }
+      .revenue-metric {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 36px;
+        font-weight: 800;
+        color: #C41E3A;
+        margin-bottom: 10px;
+      }
+      .revenue-detail {
+        font-size: 18px;
+        color: #333333;
+        line-height: 1.5;
+      }
+      .revenue-detail span {
+        font-weight: 600;
+        color: #002D62;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h2>Diversified Revenue Streams<br>Drive Profitability</h2>
+            <div class="accent-line"></div>
+        </div>
+        
+        <div class="revenue-grid">
+            <div class="revenue-item">
+                <div class="revenue-title"><i class="fas fa-trophy"></i>Tournament Income</div>
+                <div class="revenue-metric">$125 / Team</div>
+                <div class="revenue-detail">
+                    Targeting <span>75% occupancy</span> (24/32 teams per weekend). Consistent weekend "field rent" model ensures stable cash flow.
+                </div>
+            </div>
+            
+            <div class="revenue-item">
+                <div class="revenue-title"><i class="fas fa-ticket-alt"></i>Gate & Concessions</div>
+                <div class="revenue-metric">$598 Net / Team</div>
+                <div class="revenue-detail">
+                    Combined net profit from gate fees (<span>$452</span>) and concessions (<span>$146</span>) per participating team every weekend.
+                </div>
+            </div>
+            
+            <div class="revenue-item">
+                <div class="revenue-title"><i class="fas fa-calendar-alt"></i>Weekday Utilization</div>
+                <div class="revenue-metric">$100 / Slot</div>
+                <div class="revenue-detail">
+                    Cage and field rentals (Mon-Fri) at <span>50% occupancy</span>. Maximizes facility ROI outside of peak tournament hours.
+                </div>
+            </div>
+            
+            <div class="revenue-item">
+                <div class="revenue-title"><i class="fas fa-baseball-ball"></i>High-Margin Programming</div>
+                <div class="revenue-metric">$2,500 Net / Camp</div>
+                <div class="revenue-detail">
+                    Seasonal camps and league play provide significant supplemental income with <span>low overhead</span> and high player engagement.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

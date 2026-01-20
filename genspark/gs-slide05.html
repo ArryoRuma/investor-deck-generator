@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Market &amp; Traction</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        /* Base styles */
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f3f4f6;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+
+        /* Colors */
+        .text-brand-green {
+            color: #2d5016;
+        }
+
+        .bg-brand-green {
+            background-color: #2d5016;
+        }
+
+        .text-brand-clay {
+            color: #8b4513;
+        }
+
+        .bg-brand-clay {
+            background-color: #8b4513;
+        }
+
+        .border-brand-clay {
+            border-color: #8b4513;
+        }
+
+        /* Fonts */
+        .font-display {
+            font-family: 'Oswald', sans-serif;
+        }
+
+        /* Left Side Styles */
+        .narrative-col {
+            padding: 4rem 3rem 4rem 5rem;
+            background-color: #f8fafc;
+            position: relative;
+            z-index: 10;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+            border-left: 3px solid #e2e8f0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 6px;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background-color: #8b4513;
+            border: 2px solid white;
+            box-shadow: 0 0 0 2px #8b4513;
+        }
+
+        .timeline-item:last-child {
+            border-left-color: transparent;
+        }
+
+        /* Right Side Styles */
+        .stats-col {
+            background-color: #ffffff;
+            padding: 4rem 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #f1f5f9;
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .stat-icon-bg {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Decorative */
+        .field-lines {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 300px;
+            height: 300px;
+            border: 2px solid rgba(45, 80, 22, 0.05);
+            border-radius: 50%;
+            transform: translate(50%, -50%);
+        }
+
+        .map-coverage-badge {
+            background-color: #2d5016;
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container">
+        <!-- Top accent -->
+        <div class="absolute top-0 left-0 w-full h-3 bg-brand-clay z-20"></div>
+        <div class="flex flex-1 h-full">
+            <!-- Left Column: Narrative -->
+            <div class="w-5/12 narrative-col flex flex-col justify-center">
+                <div class="mb-8">
+                    <h2 class="text-brand-clay font-bold tracking-widest uppercase text-sm mb-2">Proven Execution</h2>
+                    <h1 class="font-display text-5xl text-gray-900 font-bold uppercase leading-tight">
+                        Market &amp; <br /><span class="text-brand-green">Traction</span>
+                    </h1>
+                </div>
+                <div class="space-y-2">
+                    <div class="timeline-item">
+                        <span class="text-brand-green font-bold text-lg block mb-1">Founded 2014</span>
+                        <p class="text-gray-600 leading-snug">Pine Tar Sports &amp; Dugout Baseball launched with a
+                            single turf infield.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="text-brand-green font-bold text-lg block mb-1">Scale Up</span>
+                        <p class="text-gray-600 leading-snug">Grew to a 3-turf field complex hosting 60+ tournaments
+                            annually.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="text-brand-green font-bold text-lg block mb-1">Statewide Reach</span>
+                        <p class="text-gray-600 leading-snug">Hosting events from Denton to Galveston and Weatherford to
+                            Longview.</p>
+                    </div>
+                </div>
+                <div class="map-coverage-badge flex items-center shadow-lg mt-6">
+                    <i class="fas fa-map-signs text-2xl mr-4 text-green-200"></i>
+                    <div>
+                        <p class="font-bold uppercase tracking-wider text-xs text-green-200 mb-1">Current Operations</p>
+                        <p class="font-display text-xl">Pine Tar Sports</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Column: Stats Grid -->
+            <div class="w-7/12 stats-col relative">
+                <div class="field-lines"></div>
+                <div class="grid grid-cols-2 gap-6 relative z-10">
+                    <!-- Stat 1 -->
+                    <div class="stat-card border-t-4 border-brand-green">
+                        <div class="flex justify-between items-start">
+                            <div class="stat-icon-bg bg-green-50 text-brand-green">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <span class="text-xs font-bold text-gray-400 uppercase">Annually</span>
+                        </div>
+                        <p class="font-display text-5xl font-bold text-gray-800 mb-2">60+</p>
+                        <p class="text-gray-600 font-medium">Tournaments Hosted</p>
+                    </div>
+                    <!-- Stat 2 -->
+                    <div class="stat-card border-t-4 border-brand-clay">
+                        <div class="flex justify-between items-start">
+                            <div class="stat-icon-bg bg-orange-50 text-brand-clay">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <span class="text-xs font-bold text-gray-400 uppercase">Volume</span>
+                        </div>
+                        <p class="font-display text-5xl font-bold text-gray-800 mb-2">2,200+</p>
+                        <p class="text-gray-600 font-medium">Teams Hosted / Year</p>
+                    </div>
+                    <!-- Stat 3 -->
+                    <div class="stat-card border-t-4 border-gray-800 bg-gray-50">
+                        <div class="flex justify-between items-start">
+                            <div class="stat-icon-bg bg-white text-gray-800 shadow-sm">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                            </div>
+                            <span class="text-xs font-bold text-gray-400 uppercase">Gross Rev</span>
+                        </div>
+                        <p class="font-display text-5xl font-bold text-gray-800 mb-2">$1.5M+</p>
+                        <p class="text-gray-600 font-medium">Annual Revenue (No Facilities)</p>
+                    </div>
+                    <!-- Stat 4 -->
+                    <div class="stat-card border-t-4 border-green-600 bg-green-50">
+                        <div class="flex justify-between items-start">
+                            <div class="stat-icon-bg bg-white text-green-700 shadow-sm">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <span class="text-xs font-bold text-green-800 uppercase">Net Profit</span>
+                        </div>
+                        <p class="font-display text-5xl font-bold text-green-800 mb-2">$810K+</p>
+                        <p class="text-green-700 font-medium">Net Annual Profit</p>
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <p class="text-gray-400 italic text-sm">Financials based on Pine Tar Sports current operational
+                        performance.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <div class="absolute bottom-6 left-12 right-12 flex justify-between items-end">
+            <p class="text-gray-400 text-xs uppercase tracking-widest">Dugout Howe — Investor Pitch Deck</p>
+            <p class="text-gray-400 text-xs">Source: Dugout howe pitch deck.pdf</p>
+        </div>
+    </div>
+</body>
+
+</html>

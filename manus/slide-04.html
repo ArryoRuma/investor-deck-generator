@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container { 
+        width: 1280px; 
+        min-height: 720px; 
+        background: #FFFFFF; 
+        font-family: 'Open Sans', sans-serif;
+        display: flex;
+        overflow: hidden;
+      }
+      .content-side {
+        flex: 1;
+        padding-top: 60px;
+        padding-left: 60px;
+        padding-right: 40px;
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+      }
+      .image-side {
+        width: 700px;
+        height: 720px;
+        position: relative;
+        clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+      }
+      .image-side img {
+        width: 700px;
+        height: 720px;
+        object-fit: cover;
+      }
+      h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 48px;
+        font-weight: 800;
+        color: #002D62;
+        text-transform: uppercase;
+        line-height: 1.1;
+        margin-bottom: 10px;
+      }
+      .accent-line {
+        width: 80px;
+        height: 8px;
+        background: #C41E3A;
+        margin-bottom: 40px;
+      }
+      .solution-points {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+      .point {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        padding-top: 10px;
+      }
+      .point-icon {
+        font-size: 28px;
+        color: #C41E3A;
+        width: 40px;
+        text-align: center;
+      }
+      .point-content {
+        flex: 1;
+      }
+      .point-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: #002D62;
+        margin-bottom: 5px;
+      }
+      .point-text {
+        font-size: 18px;
+        color: #333333;
+        line-height: 1.5;
+      }
+      .highlight-box {
+        margin-top: auto;
+        padding-top: 30px;
+        /* reduced bottom padding to remove overflow */
+        padding-bottom: 30px;
+      }
+      .lease-badge {
+        display: inline-block;
+        background: #89CFF0;
+        color: #002D62;
+        padding: 10px 20px;
+        font-weight: 700;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="content-side">
+            <h2>The Solution:<br>Dugout Howe</h2>
+            <div class="accent-line"></div>
+            
+            <div class="solution-points">
+                <div class="point">
+                    <div class="point-icon"><i class="fas fa-map-marked-alt"></i></div>
+                    <div class="point-content">
+                        <div class="point-title">Strategic Asset</div>
+                        <div class="point-text">A dedicated 17.71-acre complex designed for maximum throughput and player experience.</div>
+                    </div>
+                </div>
+                
+                <div class="point">
+                    <div class="point-icon"><i class="fas fa-tools"></i></div>
+                    <div class="point-content">
+                        <div class="point-title">Phase 1 Development</div>
+                        <div class="point-text">Construction of three professional-grade fields with turf infields and grass outfields.</div>
+                    </div>
+                </div>
+                
+                <div class="point">
+                    <div class="point-icon"><i class="fas fa-utensils"></i></div>
+                    <div class="point-content">
+                        <div class="point-title">Full Amenities</div>
+                        <div class="point-text">Includes modern batting cages, a full-service concession area, and a remodeled facility house.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <div class="lease-badge">10-Year Secured Lease</div>
+                <p style="margin-top: 15px; font-size: 16px; color: #666; font-weight: 600;">Ensuring consistent demand and long-term operational stability.</p>
+            </div>
+        </div>
+        <div class="image-side">
+            <img src="https://private-us-east-1.manuscdn.com/sessionFile/am19kZadmNV02PwqPG3VTh/sandbox/slides_resource_ia0fpfzo3y9bp6fr206sl-b3bdb02c-e2b-prod-us1_1768934924421_na1fn_L2hvbWUvdWJ1bnR1L3VwbG9hZC9zZWFyY2hfaW1hZ2VzLzlxbjV0SkR6RFhITg.jpg?x-oss-process=image/resize,w_1560,h_1560/format,webp&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvYW0xOWtaYWRtTlYwMlB3cVBHM1ZUaC9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9pYTBmcGZ6bzN5OWJwNmZyMjA2c2wtYjNiZGIwMmMtZTJiLXByb2QtdXMxXzE3Njg5MzQ5MjQ0MjFfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzVndiRzloWkM5elpXRnlZMmhmYVcxaFoyVnpMemx4YmpWMFNrUjZSRmhJVGcuanBnP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTU2MCxoXzE1NjAvZm9ybWF0LHdlYnAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=ALZjNjP1XO1ZOcw4RaapQ8T4WOTU-34tU~PJr65dJPUhWipdTMr1NG1vVIau1w-~3EivKSlhMoeST3uuoS0qQTjLIODGf1Q5GxacGUWmWTVUgl6U-qSh6coLj2OMVjZv2OatMJtT~OuPkfVlku7abh0FN29olk6HFWjaKm9dux15JCoWYBQtD1ULEF71EoPYTbJEbjmdEAWsgIpvsjp7VwfwGP14QPgT6-xyohDnIKKM0o0qroJ-OngYsLiudEnL~8YJWUgopTzVoawizi32eyNunUt6v5ACsXz581QtPGJIdAjRodwYVYCqARAR1SADvFxYw1OYhVCgKE73uFA4Nw__" alt="Professional Baseball Field Aerial">
+        </div>
+    </div>
+</body>
+</html>

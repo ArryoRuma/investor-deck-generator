@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Team &amp; Closing</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f3f4f6;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+
+        /* Brand Colors */
+        .bg-brand-green {
+            background-color: #2d5016;
+        }
+
+        .text-brand-green {
+            color: #2d5016;
+        }
+
+        .bg-brand-clay {
+            background-color: #8b4513;
+        }
+
+        .text-brand-clay {
+            color: #8b4513;
+        }
+
+        .border-brand-clay {
+            border-color: #8b4513;
+        }
+
+        .border-brand-green {
+            border-color: #2d5016;
+        }
+
+        /* Typography */
+        .font-display {
+            font-family: 'Oswald', sans-serif;
+        }
+
+        /* Header */
+        .header-bar {
+            height: 12px;
+            background-color: #2d5016;
+            width: 100%;
+        }
+
+        /* Layout */
+        .main-content {
+            display: flex;
+            height: 100%;
+            padding: 2rem 5rem;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        /* Left Column: Team */
+        .team-column {
+            flex: 0 0 40%;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .profile-card {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            overflow: hidden;
+            border: 1px solid #e5e7eb;
+            position: relative;
+        }
+
+        .profile-header {
+            background-color: #2d5016;
+            height: 100px;
+            position: relative;
+        }
+
+        .profile-avatar {
+            width: 100px;
+            height: 100px;
+            background-color: #f3f4f6;
+            border: 4px solid white;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -50px;
+            left: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #9ca3af;
+        }
+
+        .profile-body {
+            padding: 3.5rem 2rem 2rem 2rem;
+        }
+
+        /* Right Column: CTA & Steps */
+        .cta-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .action-card {
+            background: #f8fafc;
+            border-left: 6px solid #8b4513;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.2s;
+        }
+
+        .step-item:hover {
+            transform: translateX(10px);
+            border-color: #cbd5e1;
+        }
+
+        .step-number {
+            width: 32px;
+            height: 32px;
+            background-color: #2d5016;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            margin-right: 1rem;
+        }
+
+        .contact-box {
+            background-color: #2d5016;
+            color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 10px 10px;
+        }
+
+        /* Decorative */
+        .bg-texture {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            height: 50%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container">
+        <div class="header-bar"></div>
+        <div class="bg-texture"></div>
+        <!-- Header -->
+        <div class="px-20 pt-10 pb-2 relative z-10">
+            <h2 class="text-brand-clay font-bold tracking-widest uppercase text-sm mb-2">Leadership &amp; Execution</h2>
+            <h1 class="font-display text-5xl text-gray-900 font-bold uppercase leading-tight">
+                Team &amp; <span class="text-brand-green">Next Steps</span>
+            </h1>
+        </div>
+        <div class="main-content relative z-10">
+            <!-- Left Column: Team Profile -->
+            <div class="team-column">
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <div class="absolute right-4 top-4 text-white opacity-20 text-4xl">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                    </div>
+                    <div class="profile-avatar shadow-lg">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="profile-body">
+                        <h3 class="font-display text-3xl font-bold text-gray-900 mb-1">Tim Truman</h3>
+                        <p class="text-brand-clay font-bold uppercase text-sm tracking-wider mb-4">Founder &amp;
+                            Operator</p>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-brand-green mt-1 mr-3"></i>
+                                <p class="text-sm text-gray-600"><strong>Proven Traction:</strong> Founder of Pine Tar
+                                    Sports &amp; Dugout Baseball (2014-Present).</p>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-brand-green mt-1 mr-3"></i>
+                                <p class="text-sm text-gray-600"><strong>Scale:</strong> Managing 60+ tournaments &amp;
+                                    2,200+ teams annually.</p>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-brand-green mt-1 mr-3"></i>
+                                <p class="text-sm text-gray-600"><strong>Commitment:</strong> 30% sweat equity ownership
+                                    stake in Dugout Howe.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <p class="text-gray-500 italic text-sm">"Events hosted from Denton to Galveston and Weatherford to
+                        Longview."</p>
+                </div>
+            </div>
+            <!-- Right Column: CTA -->
+            <div class="cta-column">
+                <!-- Investment Summary -->
+                <div class="action-card">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-display text-xl font-bold text-gray-800">The Ask: Phase 1 Capital</h3>
+                        <span class="bg-brand-clay text-white px-3 py-1 rounded text-xs font-bold uppercase">Open
+                            Round</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Securing strategic partners for the construction of the
+                        premier 3-field complex in Howe, TX.</p>
+                    <div class="flex gap-4">
+                        <div class="flex-1 bg-white p-2 rounded border border-gray-200 text-center">
+                            <p class="text-xs text-gray-500 uppercase font-bold">Target Raise</p>
+                            <p class="font-display text-xl font-bold text-brand-green">$2.5M</p>
+                        </div>
+                        <div class="flex-1 bg-white p-2 rounded border border-gray-200 text-center">
+                            <p class="text-xs text-gray-500 uppercase font-bold">Pref Return</p>
+                            <p class="font-display text-xl font-bold text-brand-green">9% <span
+                                    class="text-xs text-gray-400">Monthly</span></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Next Steps -->
+                <div>
+                    <h4 class="font-bold text-gray-400 uppercase text-xs tracking-widest mb-3">Immediate Next Steps</h4>
+                    <div class="step-list">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div>
+                                <p class="font-bold text-gray-800 text-sm">Review &amp; Commitment</p>
+                                <p class="text-xs text-gray-500">Review full offering memorandum and reserve allocation.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div>
+                                <p class="font-bold text-gray-800 text-sm">Closing &amp; Funding</p>
+                                <p class="text-xs text-gray-500">Finalize LLC agreements and fund escrow.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div>
+                                <p class="font-bold text-gray-800 text-sm">Groundbreaking</p>
+                                <p class="text-xs text-gray-500">Commence construction on 17.71-acre site (Month 0).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact Box -->
+                <div class="contact-box shadow-xl mt-auto">
+                    <div class="contact-pattern"></div>
+                    <h3 class="font-display text-2xl font-bold mb-4 relative z-10">Contact Us</h3>
+                    <div class="grid grid-cols-2 gap-4 relative z-10">
+                        <div>
+                            <p class="text-xs text-green-200 uppercase font-bold mb-1">Phone</p>
+                            <p class="font-bold">[Phone Number TBD]</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-green-200 uppercase font-bold mb-1">Email</p>
+                            <p class="font-bold">[Email Address TBD]</p>
+                        </div>
+                        <div class="col-span-2 mt-2 pt-4 border-t border-green-700">
+                            <p class="text-xs text-green-200 uppercase font-bold mb-1">Location</p>
+                            <p class="font-bold text-sm">491 Morrison Rd, Howe, TX</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <div class="absolute bottom-6 left-20 right-20 flex justify-between items-end">
+            <p class="text-gray-400 text-xs uppercase tracking-widest">Dugout Howe — Investor Pitch Deck</p>
+            <p class="text-gray-400 text-xs">
+                Source: <a class="underline hover:text-brand-green"
+                    href="https://www.genspark.ai/api/files/s/3cM5kdn6">Dugout howe pitch deck.pdf</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

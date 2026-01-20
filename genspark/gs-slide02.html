@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Executive Summary</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f3f4f6;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+
+        /* Brand Colors */
+        .bg-brand-green {
+            background-color: #2d5016;
+        }
+
+        .text-brand-green {
+            color: #2d5016;
+        }
+
+        .bg-brand-clay {
+            background-color: #8b4513;
+        }
+
+        .text-brand-clay {
+            color: #8b4513;
+        }
+
+        .border-brand-clay {
+            border-color: #8b4513;
+        }
+
+        .border-brand-green {
+            border-color: #2d5016;
+        }
+
+        /* Typography */
+        .font-display {
+            font-family: 'Oswald', sans-serif;
+        }
+
+        /* Decorative Elements */
+        .header-bar {
+            height: 16px;
+            background-color: #2d5016;
+            width: 100%;
+        }
+
+        .baseball-bg {
+            position: absolute;
+            right: -10%;
+            top: 20%;
+            font-size: 40rem;
+            color: #f3f4f6;
+            z-index: 0;
+            opacity: 0.6;
+            transform: rotate(-15deg);
+        }
+
+        .kpi-card {
+            background-color: white;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-left-width: 8px;
+            transition: transform 0.2s;
+            z-index: 10;
+        }
+
+        .list-bullet {
+            color: #8b4513;
+            margin-right: 0.75rem;
+            font-size: 1.25rem;
+        }
+
+        .highlight-text {
+            background-color: #fef3c7;
+            padding: 0 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container">
+        <!-- Top Bar -->
+        <div class="header-bar"></div>
+        <!-- Background Icon -->
+        <i class="fas fa-baseball-ball baseball-bg"></i>
+        <!-- Content Wrapper -->
+        <div class="flex flex-1 p-12 relative z-10">
+            <!-- Left Column: Narrative -->
+            <div class="w-7/12 pr-12 flex flex-col justify-center">
+                <!-- Title -->
+                <div class="mb-8">
+                    <h2 class="text-brand-clay font-bold tracking-widest uppercase text-sm mb-2">Investment Opportunity
+                    </h2>
+                    <h1 class="font-display text-6xl text-gray-900 font-bold uppercase leading-tight">
+                        Executive <span class="text-brand-green">Summary</span>
+                    </h1>
+                    <div class="h-2 w-24 bg-brand-clay mt-4 rounded-full"></div>
+                </div>
+                <!-- Text Content -->
+                <div class="space-y-6 text-gray-700 text-lg leading-relaxed">
+                    <p class="font-medium text-xl text-gray-900">
+                        Dugout Howe seeks to capitalize on the massive demand for youth sports in North Texas by
+                        developing a premier baseball facility.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle list-bullet mt-1"></i>
+                            <p><strong>Proven Traction:</strong> Pine Tar Sports &amp; Dugout Baseball have operated
+                                since 2014, currently hosting 60+ tournaments and 2,200+ teams annually.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle list-bullet mt-1"></i>
+                            <p><strong>Strategic Asset:</strong> Developing 17.71 acres in Howe, TX into a 3-field
+                                complex (Phase 1) with turf infields to maximize playability.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle list-bullet mt-1"></i>
+                            <p><strong>Investment Security:</strong> Secured 10-year lease with a large corporation for
+                                all facilities, ensuring long-term operational stability.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle list-bullet mt-1"></i>
+                            <p><strong>Clear Exit Strategy:</strong> Principal repayment begins 10 months
+                                post-construction; full initial investment returned by month 30.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Right Column: KPIs Grid -->
+            <div class="w-5/12 grid grid-cols-1 gap-6 content-center">
+                <!-- KPI 1: The Raise -->
+                <div class="kpi-card p-6 border-brand-green flex flex-col justify-center h-40">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-gray-500 uppercase text-sm font-bold tracking-wider">Capital Raise (Phase
+                            1)</span>
+                        <i class="fas fa-money-bill-wave text-brand-green text-xl"></i>
+                    </div>
+                    <p class="font-display text-5xl font-bold text-gray-900">$2.5M</p>
+                    <p class="text-sm text-gray-600 mt-2">To build 3 turf fields &amp; facilities</p>
+                </div>
+                <!-- KPI 2: ROI -->
+                <div class="kpi-card p-6 border-brand-clay flex flex-col justify-center h-40">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-gray-500 uppercase text-sm font-bold tracking-wider">Projected Return</span>
+                        <i class="fas fa-chart-line text-brand-clay text-xl"></i>
+                    </div>
+                    <p class="font-display text-5xl font-bold text-gray-900">21-24%</p>
+                    <p class="text-sm text-gray-600 mt-2">Annual return target for investors</p>
+                </div>
+                <!-- KPI 3: Monthly Pref -->
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="kpi-card p-5 border-l-4 border-gray-800 flex flex-col justify-center">
+                        <span class="text-gray-500 uppercase text-xs font-bold tracking-wider mb-1">Monthly Pref</span>
+                        <p class="font-display text-4xl font-bold text-gray-900">9%</p>
+                        <p class="text-xs text-gray-500 mt-1">On outstanding inv.</p>
+                    </div>
+                    <div class="kpi-card p-5 border-l-4 border-gray-800 flex flex-col justify-center">
+                        <span class="text-gray-500 uppercase text-xs font-bold tracking-wider mb-1">Current
+                            Profit</span>
+                        <p class="font-display text-3xl font-bold text-gray-900">$810k+</p>
+                        <p class="text-xs text-gray-500 mt-1">Net profit (current ops)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <div class="absolute bottom-6 left-12 right-12 flex justify-between items-end border-t border-gray-200 pt-4">
+            <p class="text-gray-400 text-xs uppercase tracking-widest">Dugout Howe — Investor Pitch Deck</p>
+            <p class="text-gray-400 text-xs">Source: Dugout howe pitch deck.pdf</p>
+        </div>
+    </div>
+</body>
+
+</html>

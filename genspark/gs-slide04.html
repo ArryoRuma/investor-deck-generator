@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Solution - Dugout Howe</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f3f4f6;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+
+        /* Brand Colors */
+        .bg-brand-green {
+            background-color: #2d5016;
+        }
+
+        .text-brand-green {
+            color: #2d5016;
+        }
+
+        .bg-brand-clay {
+            background-color: #8b4513;
+        }
+
+        .text-brand-clay {
+            color: #8b4513;
+        }
+
+        .border-brand-clay {
+            border-color: #8b4513;
+        }
+
+        .border-brand-green {
+            border-color: #2d5016;
+        }
+
+        /* Typography */
+        .font-display {
+            font-family: 'Oswald', sans-serif;
+        }
+
+        /* Layout */
+        .split-layout {
+            display: flex;
+            height: 100%;
+        }
+
+        .left-panel {
+            flex: 0 0 55%;
+            padding: 4rem 5rem;
+            display: flex;
+            flex-col: column;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .right-panel {
+            flex: 0 0 45%;
+            background-color: #2d5016;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem;
+            clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        /* Decorative Elements */
+        .location-card {
+            background-color: #f8fafc;
+            border-left: 6px solid #8b4513;
+            padding: 1.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: #374151;
+            font-size: 1.1rem;
+        }
+
+        .feature-icon {
+            width: 32px;
+            height: 32px;
+            background-color: #ecfdf5;
+            color: #2d5016;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .spec-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 2rem;
+            border-radius: 1rem;
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .diamond-texture {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .lease-badge {
+            background-color: #8b4513;
+            color: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            border: 2px solid #a05a2c;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container">
+        <div class="split-layout">
+            <!-- Left Panel: Narrative -->
+            <div class="left-panel">
+                <div class="mb-2">
+                    <span class="text-brand-clay font-bold tracking-widest uppercase text-sm">Strategic
+                        Development</span>
+                </div>
+                <h1 class="font-display text-5xl text-gray-900 font-bold uppercase leading-tight mb-8">
+                    Our Solution: <br /><span class="text-brand-green">Dugout Howe</span>
+                </h1>
+                <!-- Location Block -->
+                <div class="location-card">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-map-marker-alt text-brand-clay text-xl mr-3"></i>
+                        <span class="font-display text-2xl font-bold text-gray-800">491 Morrison Rd</span>
+                    </div>
+                    <div class="flex items-center text-gray-600">
+                        <span class="mr-4">Howe, TX</span>
+                        <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-4"></span>
+                        <i class="fas fa-ruler-combined text-brand-green mr-2"></i>
+                        <span class="font-semibold">17.71 Acres</span>
+                    </div>
+                </div>
+                <p class="text-gray-600 text-lg leading-relaxed mb-8 pr-8">
+                    We are developing a state-of-the-art baseball complex strategically located to capture the growing
+                    North Texas market. Phase 1 delivers a complete tournament-ready facility designed for high
+                    throughput and premium player experience.
+                </p>
+                <!-- Key Value Props List -->
+                <div class="space-y-3">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
+                        <span class="font-medium">Premium playing surfaces (Turf Infields)</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-users-cog"></i></div>
+                        <span class="font-medium">Operational efficiency optimized for tournaments</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+                        <span class="font-medium">Secured corporate partnerships</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Panel: Specs & Visuals -->
+            <div class="right-panel">
+                <div class="diamond-texture"></div>
+                <!-- Phase 1 Specs Card -->
+                <div class="spec-card relative z-10">
+                    <h3 class="font-display text-2xl font-bold mb-4 border-b border-white border-opacity-30 pb-2">Phase
+                        1 Build Specs</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                            <div>
+                                <span class="block font-bold text-lg">3 Premium Fields</span>
+                                <span class="text-sm opacity-80">Turf Infields, Grass Outfields, Sprinklers</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                            <div>
+                                <span class="block font-bold text-lg">Spectator Amenities</span>
+                                <span class="text-sm opacity-80">Concrete Seating, Bathroom/Concessions</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                            <div>
+                                <span class="block font-bold text-lg">Infrastructure</span>
+                                <span class="text-sm opacity-80">Crushed Asphalt/Rock Parking, 4 Batting Cages</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Lease Badge -->
+                <div class="lease-badge relative z-10 transform translate-x-4">
+                    <div class="bg-white bg-opacity-20 rounded-full p-3 mr-4">
+                        <i class="fas fa-file-contract text-2xl text-white"></i>
+                    </div>
+                    <div>
+                        <span class="block font-display text-xl font-bold uppercase">10-Year Lease Secured</span>
+                        <span class="text-sm opacity-90">With Large Corporation for All Facilities</span>
+                    </div>
+                </div>
+                <!-- Decorative baseball graphic at bottom right -->
+                <i class="fas fa-baseball-ball absolute -bottom-12 -right-12 text-9xl text-white opacity-10"></i>
+            </div>
+        </div>
+        <!-- Footer -->
+        <div class="absolute bottom-6 left-12 flex justify-between items-end w-5/12 z-20">
+            <p class="text-gray-400 text-xs uppercase tracking-widest">Dugout Howe — Investor Pitch Deck</p>
+            <p class="text-gray-400 text-xs">Source: Dugout howe pitch deck.pdf</p>
+        </div>
+    </div>
+</body>
+
+</html>
