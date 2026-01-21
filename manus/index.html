@@ -8,7 +8,6 @@
     <link href="manus.css" rel="stylesheet">
     <style>
       .slide-container {
-        display: flex;
         position: relative;
         justify-content: center;
         align-items: center;
@@ -102,8 +101,8 @@
 
     <!-- Navigation Buttons -->
     <div class="nav-buttons">
-        <a href="#" class="nav-btn" style="visibility: hidden;"><i class="fas fa-chevron-left"></i></a>
-        <a href="slide-01.html" class="nav-btn"><i class="fas fa-chevron-right"></i></a>
+        <a href="#" class="nav-btn" style="display: none;" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></a>
+        <a href="slide-01.html" class="nav-btn" aria-label="Next slide"><i class="fas fa-chevron-right"></i></a>
     </div>
 </body>
 </html>

@@ -438,6 +438,12 @@ h2 {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
+.nav-btn:focus,
+.nav-btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
 .nav-btn i {
   pointer-events: none;
 }
