@@ -204,6 +204,7 @@
     </style>
 </head>
 <body>
+    <div class="presentation-frame">
     <div class="slide-container">
         <div class="header-section">
             <h2>Capital Allocation &<br><span>Use of Funds</span></h2>
@@ -314,6 +315,7 @@
             </div>
         </div>
     </div>
+    </div>
     
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -333,7 +335,9 @@
                 color: [colorAccent, colorPrimary, colorCategory1, colorCategory2, colorCategory3],
                 tooltip: {
                     trigger: 'item',
-                    formatter: '{b}: {d}%'
+                    formatter: function(params) {
+                        return params.name + ': $' + params.value.toLocaleString();
+                    }
                 },
                 series: [
                     {
