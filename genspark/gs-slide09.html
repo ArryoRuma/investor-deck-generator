@@ -18,7 +18,19 @@
             padding: 0;
             overflow: hidden;
             font-family: 'Montserrat', sans-serif;
-            background-color: #f3f4f6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px;
+        }
+
+        .presentation-frame {
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .slide-container {
@@ -198,6 +210,7 @@
 </head>
 
 <body>
+    <div class="presentation-frame">
     <div class="slide-container">
         <div class="header-bar"></div>
         <div class="bg-texture"></div>
@@ -368,6 +381,8 @@
             myChart.setOption(option);
         });
     </script>
+    </div>
+    </div>
 </body>
 
 </html>
