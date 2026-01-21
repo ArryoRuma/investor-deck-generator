@@ -48,7 +48,7 @@
 
 /* Presentation Frame */
 body {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #6e959c 0%, #1d3c59 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -164,13 +164,13 @@ h2 {
 /* Image Sections */
 .image-section {
   width: 500px;
-  height: 720px;
+  height: 750px;
   background: var(--color-primary);
 }
 
 .image-section img {
   width: 500px;
-  height: 720px;
+  height: 750px;
   object-fit: cover;
   opacity: 0.9;
 }
@@ -188,9 +188,13 @@ h2 {
 
 /* Right Image (for split layouts) */
 .right-image {
-  flex: 1.2;
+  flex: 2.86;
   position: relative;
   clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+
 }
 
 .right-image img {
@@ -203,11 +207,11 @@ h2 {
 .diagonal-accent {
   position: absolute;
   top: 0;
-  left: 45%;
+  left: 40%;
   width: 20px;
   height: 100%;
   background: var(--color-accent);
-  transform: skewX(-8deg);
+  transform: skewX(-9deg);
   z-index: 1;
 }
 
