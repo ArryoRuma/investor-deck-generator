@@ -1,18 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="manus.css" rel="stylesheet">
     <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      .slide-container { 
-        width: 1280px; 
-        min-height: 720px; 
-        background: #FFFFFF; 
-        font-family: 'Open Sans', sans-serif;
-        display: flex;
-        overflow: hidden;
-      }
       .image-side {
         width: 600px;
         height: 700px; /* reduced so column is under 720 */
@@ -32,12 +23,7 @@
         flex-direction: column;
       }
       h2 {
-        font-family: 'Montserrat', sans-serif;
         font-size: 44px;
-        font-weight: 800;
-        color: #002D62;
-        text-transform: uppercase;
-        line-height: 1.1;
         margin-bottom: 12px; /* reduced spacing after title */
       }
       .phase-container {
@@ -54,9 +40,9 @@
         margin-bottom: 10px;
       }
       .phase-number {
-        background: #C41E3A;
-        color: #FFFFFF;
-        font-family: 'Montserrat', sans-serif;
+        background: var(--color-accent);
+        color: var(--color-white);
+        font-family: var(--font-display);
         font-weight: 800;
         font-size: 24px;
         width: 120px;
@@ -67,19 +53,19 @@
         margin-right: 20px;
       }
       .phase-title {
-        font-family: 'Montserrat', sans-serif;
+        font-family: var(--font-display);
         font-size: 28px;
         font-weight: 700;
-        color: #002D62;
+        color: var(--color-primary);
       }
       .phase-list {
         list-style: none;
         padding-left: 20px;
-        border-left: 3px solid #89CFF0;
+        border-left: 3px solid var(--color-secondary);
       }
       .phase-list li {
         font-size: 18px;
-        color: #333333;
+        color: var(--color-text);
         margin-bottom: 4px; /* reduced spacing between list items */
         line-height: 1.4;
       }
@@ -88,12 +74,12 @@
         padding-top: 8px; /* reduced */
         padding-bottom: 12px; /* reduced */
         font-style: italic;
-        color: #666;
+        color: var(--color-text-light);
         font-size: 18px;
-        border-top: 1px solid #EEE;
+        border-top: 1px solid var(--color-border);
       }
       .efficiency-note strong {
-        color: #C41E3A;
+        color: var(--color-accent);
       }
     </style>
 </head>

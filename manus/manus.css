@@ -1,0 +1,406 @@
+/* Manus Investor Deck - Common Styles */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap');
+
+/* CSS Variables - Brand Colors */
+:root {
+  --color-primary: #002D62;    /* Navy Blue */
+  --color-accent: #C41E3A;     /* Red */
+  --color-secondary: #89CFF0;  /* Light Blue */
+  --color-white: #FFFFFF;
+  --color-text: #333333;
+  --color-text-light: #666666;
+  --color-text-lighter: #E0E0E0;
+  --color-text-muted: #555555;
+  --color-text-dark: #111827;
+  --color-text-medium: #374151;
+  --color-border: #E0E0E0;
+  --color-bg-light: #F8F9FA;
+  --color-bg-hover: #f9fafb;
+  
+  /* Category Colors for Charts/Tables */
+  --color-category-1: #1e40af;  /* Blue */
+  --color-category-2: #4b5563;  /* Gray */
+  --color-category-3: #d97706;  /* Orange */
+  
+  /* Semi-transparent Icon Backgrounds */
+  --color-accent-bg: rgba(196, 30, 58, 0.1);
+  --color-primary-bg: rgba(0, 45, 98, 0.1);
+  --color-category-1-bg: rgba(30, 64, 175, 0.2);
+  --color-category-2-bg: rgba(75, 85, 99, 0.1);
+  --color-category-3-bg: rgba(217, 119, 6, 0.1);
+  
+  /* Box Shadows */
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  
+  --font-display: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+/* Universal Reset */
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+/* Base Slide Container */
+.slide-container { 
+  width: 1280px; 
+  min-height: 720px; 
+  background: var(--color-white); 
+  font-family: var(--font-body);
+  display: flex;
+  overflow: hidden;
+}
+
+/* Typography */
+h1 {
+  font-family: var(--font-display);
+  font-size: 64px;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.1;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+
+/* Accent Line */
+.accent-line {
+  width: 100px;
+  height: 8px;
+  background: var(--color-accent);
+  margin-bottom: 40px;
+}
+
+/* Header Section */
+.header-section {
+  padding-top: 60px;
+  padding-left: 80px;
+  margin-bottom: 40px;
+}
+
+/* Content Section */
+.content-section {
+  flex: 1;
+  padding-top: 60px;
+  padding-left: 60px;
+  padding-right: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Metric Cards */
+.metric-card {
+  padding-top: 20px;
+}
+
+.metric-value {
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--color-accent);
+  margin-bottom: 5px;
+}
+
+.metric-label {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.metric-desc {
+  font-size: 16px;
+  color: var(--color-text-light);
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+/* Grids */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.two-column-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* Image Sections */
+.image-section {
+  width: 500px;
+  height: 720px;
+  background: var(--color-primary);
+}
+
+.image-section img {
+  width: 500px;
+  height: 720px;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+/* Left Content (for split layouts) */
+.left-content {
+  flex: 1;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  background: var(--color-white);
+}
+
+/* Right Image (for split layouts) */
+.right-image {
+  flex: 1.2;
+  position: relative;
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.right-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Diagonal Accent */
+.diagonal-accent {
+  position: absolute;
+  top: 0;
+  left: 45%;
+  width: 20px;
+  height: 100%;
+  background: var(--color-accent);
+  transform: skewX(-8deg);
+  z-index: 1;
+}
+
+/* Vision/Subtitle Text */
+.vision, .subtitle {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 40px;
+}
+
+/* Opportunity/Description Text */
+.opportunity {
+  font-size: 20px;
+  color: var(--color-text);
+  border-left: 4px solid var(--color-secondary);
+  padding-left: 20px;
+  margin-bottom: 60px;
+  max-width: 500px;
+}
+
+/* Presenter Info */
+.presenter-info {
+  margin-top: auto;
+}
+
+.presenter-name {
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 24px;
+}
+
+.location {
+  color: var(--color-text-light);
+  font-size: 18px;
+}
+
+/* Financial Highlight */
+.financial-highlight {
+  margin-top: auto;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  border-top: 2px solid var(--color-secondary);
+}
+
+.financial-text {
+  font-size: 22px;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.financial-text span {
+  color: var(--color-accent);
+}
+
+/* Problem Grid (for dark backgrounds) */
+.problem-grid {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding-top: 40px;
+}
+
+.problem-item {
+  width: 350px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.icon-box {
+  font-size: 48px;
+  color: var(--color-accent);
+  margin-bottom: 25px;
+}
+
+.problem-title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--color-white);
+}
+
+.problem-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-text-lighter);
+}
+
+.accent-bar {
+  width: 120px;
+  height: 6px;
+  background: var(--color-accent);
+  margin: 20px auto;
+}
+
+/* Tables */
+.tiers-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 18px;
+}
+
+.tiers-table th {
+  text-align: left;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-primary);
+  padding-top: 15px;
+  border-bottom: 3px solid var(--color-primary);
+  text-transform: uppercase;
+}
+
+.tiers-table td {
+  padding-top: 15px;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.tiers-table .highlight {
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+/* Benefits Section */
+.benefits-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.benefit-box {
+  padding-top: 20px;
+  border-top: 4px solid var(--color-secondary);
+}
+
+.benefit-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.benefit-text {
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.benefit-text b {
+  color: var(--color-accent);
+}
+
+/* Asset Value */
+.asset-value {
+  margin-top: auto;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.asset-value span {
+  color: var(--color-accent);
+}
+
+/* Main Content Area */
+.main-content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+/* Dark Slide Variant */
+.slide-container.dark {
+  background: var(--color-primary);
+  color: var(--color-white);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-container.dark h2 {
+  color: var(--color-white);
+}
+
+.slide-container.dark .subtitle {
+  color: var(--color-secondary);
+}
+
+/* Revenue Metrics */
+.revenue-metric {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--color-accent);
+}
+
+.revenue-label {
+  font-size: 18px;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 8px;
+}

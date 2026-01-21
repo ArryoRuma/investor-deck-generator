@@ -1,38 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="manus.css" rel="stylesheet">
     <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
       .slide-container { 
-        width: 1280px; 
-        min-height: 720px; 
-        background: #FFFFFF; 
-        font-family: 'Open Sans', sans-serif;
-        display: flex;
         flex-direction: column;
-        overflow: hidden;
-      }
-      .header-section {
-        padding-top: 60px;
-        padding-left: 80px;
-        padding-right: 80px;
-        margin-bottom: 40px;
-      }
-      h2 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 48px;
-        font-weight: 800;
-        color: #002D62;
-        text-transform: uppercase;
-        line-height: 1.1;
-      }
-      .accent-line {
-        width: 120px;
-        height: 8px;
-        background: #C41E3A;
-        margin-top: 15px;
       }
       .timeline-container {
         padding-top: 40px;
@@ -48,24 +21,24 @@
         padding-top: 20px;
       }
       .time-label {
-        font-family: 'Montserrat', sans-serif;
+        font-family: var(--font-display);
         font-size: 24px;
         font-weight: 800;
-        color: #C41E3A;
+        color: var(--color-accent);
         margin-bottom: 10px;
       }
       .step-title {
-        font-family: 'Montserrat', sans-serif;
+        font-family: var(--font-display);
         font-size: 18px;
         font-weight: 700;
-        color: #002D62;
+        color: var(--color-primary);
         text-transform: uppercase;
         margin-bottom: 15px;
         min-height: 44px;
       }
       .step-desc {
         font-size: 16px;
-        color: #333;
+        color: var(--color-text);
         line-height: 1.5;
       }
       .return-summary {
@@ -74,7 +47,7 @@
         padding-bottom: 80px;
         padding-left: 80px;
         padding-right: 80px;
-        background: #F8F9FA;
+        background: var(--color-bg-light);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -83,34 +56,34 @@
         text-align: center;
       }
       .summary-value {
-        font-family: 'Montserrat', sans-serif;
+        font-family: var(--font-display);
         font-size: 42px;
         font-weight: 800;
-        color: #002D62;
+        color: var(--color-primary);
       }
       .summary-label {
         font-size: 16px;
         font-weight: 600;
-        color: #666;
+        color: var(--color-text-light);
         text-transform: uppercase;
         letter-spacing: 1px;
         margin-top: 5px;
       }
       .exit-strategy {
         width: 40%;
-        border-left: 4px solid #89CFF0;
+        border-left: 4px solid var(--color-secondary);
         padding-left: 30px;
       }
       .exit-title {
-        font-family: 'Montserrat', sans-serif;
+        font-family: var(--font-display);
         font-size: 20px;
         font-weight: 700;
-        color: #C41E3A;
+        color: var(--color-accent);
         margin-bottom: 10px;
       }
       .exit-text {
         font-size: 16px;
-        color: #333;
+        color: var(--color-text);
         line-height: 1.4;
       }
     </style>

@@ -1,44 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="manus.css" rel="stylesheet">
     <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
       .slide-container { 
-        width: 1280px; 
-        min-height: 720px; 
-        background: #FFFFFF; 
-        font-family: 'Open Sans', sans-serif;
+        flex-direction: column;
+      }
+      .highlights-section {
         display: flex;
         flex-direction: column;
-        overflow: hidden;
-      }
-      .header-section {
-        padding-top: 60px;
-        padding-left: 80px;
-        margin-bottom: 40px;
-      }
-      h2 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 48px;
-        font-weight: 800;
-        color: #002D62;
-        text-transform: uppercase;
-        line-height: 1.1;
-      }
-      .accent-line {
-        width: 120px;
-        height: 8px;
-        background: #C41E3A;
-        margin-top: 15px;
-      }
-      .main-content {
-        display: grid;
-        grid-template-columns: 1.2fr 1fr;
-        gap: 60px;
-        padding-left: 80px;
-        padding-right: 80px;
+        gap: 30px;
       }
       .budget-table {
         width: 100%;
@@ -47,58 +19,53 @@
       }
       .budget-table th {
         text-align: left;
-        font-family: 'Montserrat', sans-serif;
+        font-family: var(--font-display);
         font-weight: 700;
-        color: #002D62;
+        color: var(--color-primary);
         padding-top: 15px;
-        border-bottom: 3px solid #002D62;
+        border-bottom: 3px solid var(--color-primary);
         text-transform: uppercase;
       }
       .budget-table td {
         padding-top: 15px;
-        border-bottom: 1px solid #E0E0E0;
-        color: #333;
+        border-bottom: 1px solid var(--color-border);
+        color: var(--color-text);
       }
       .budget-table .amount {
         text-align: right;
         font-weight: 600;
-        color: #C41E3A;
+        color: var(--color-accent);
       }
       .total-row td {
         border-bottom: none;
         padding-top: 20px;
-        font-family: 'Montserrat', sans-serif;
+        font-family: var(--font-display);
         font-size: 24px;
         font-weight: 800;
-        color: #002D62;
+        color: var(--color-primary);
       }
       .total-row .amount {
-        color: #002D62;
-      }
-      .highlights-section {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
+        color: var(--color-primary);
       }
       .highlight-box {
         padding-top: 20px;
-        border-top: 4px solid #89CFF0;
+        border-top: 4px solid var(--color-secondary);
       }
       .highlight-title {
-        font-family: 'Montserrat', sans-serif;
+        font-family: var(--font-display);
         font-size: 22px;
         font-weight: 700;
-        color: #002D62;
+        color: var(--color-primary);
         margin-bottom: 10px;
         text-transform: uppercase;
       }
       .highlight-text {
         font-size: 18px;
         line-height: 1.5;
-        color: #555;
+        color: var(--color-text-light);
       }
       .highlight-text b {
-        color: #C41E3A;
+        color: var(--color-accent);
       }
     </style>
 </head>
