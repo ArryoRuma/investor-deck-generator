@@ -11,6 +11,8 @@
   --color-white: #FFFFFF;
   --color-text: #333333;
   --color-text-light: #666666;
+  --color-text-lighter: #E0E0E0;
+  --color-text-muted: #555555;
   --color-text-dark: #111827;
   --color-text-medium: #374151;
   --color-border: #E0E0E0;
@@ -272,7 +274,7 @@ h2 {
 .problem-text {
   font-size: 18px;
   line-height: 1.6;
-  color: #E0E0E0;
+  color: var(--color-text-lighter);
 }
 
 .accent-bar {
@@ -334,7 +336,7 @@ h2 {
 .benefit-text {
   font-size: 18px;
   line-height: 1.5;
-  color: #555;
+  color: var(--color-text-muted);
 }
 
 .benefit-text b {
