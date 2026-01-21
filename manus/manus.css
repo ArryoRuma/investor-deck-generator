@@ -31,6 +31,10 @@
   --color-category-2-bg: rgba(75, 85, 99, 0.1);
   --color-category-3-bg: rgba(217, 119, 6, 0.1);
   
+  /* Box Shadows */
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  
   --font-display: 'Montserrat', sans-serif;
   --font-body: 'Open Sans', sans-serif;
 }
