@@ -66,7 +66,7 @@ body {
 /* Base Slide Container */
 .slide-container { 
   width: 1280px; 
-  min-height: 720px; 
+  height: 720px; 
   background: var(--color-white); 
   font-family: var(--font-body);
   display: flex;
