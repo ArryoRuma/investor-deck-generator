@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="manus.css" rel="stylesheet">
+    <style>
+      .slide-container { 
+        flex-direction: column;
+      }
+      .highlights-section {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+      .budget-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 18px;
+      }
+      .budget-table th {
+        text-align: left;
+        font-family: var(--font-display);
+        font-weight: 700;
+        color: var(--color-primary);
+        padding-top: 15px;
+        border-bottom: 3px solid var(--color-primary);
+        text-transform: uppercase;
+      }
+      .budget-table td {
+        padding-top: 15px;
+        border-bottom: 1px solid var(--color-border);
+        color: var(--color-text);
+      }
+      .budget-table .amount {
+        text-align: right;
+        font-weight: 600;
+        color: var(--color-accent);
+      }
+      .total-row td {
+        border-bottom: none;
+        padding-top: 20px;
+        font-family: var(--font-display);
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--color-primary);
+      }
+      .total-row .amount {
+        color: var(--color-primary);
+      }
+      .highlight-box {
+        padding-top: 20px;
+        border-top: 4px solid var(--color-secondary);
+      }
+      .highlight-title {
+        font-family: var(--font-display);
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--color-primary);
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+      .highlight-text {
+        font-size: 18px;
+        line-height: 1.5;
+        color: var(--color-text-light);
+      }
+      .highlight-text b {
+        color: var(--color-accent);
+      }
+    </style>
+</head>
+<body>
+    <div class="presentation-frame">
+    <div class="slide-container">
+        <div class="header-section">
+            <h2>Phase 1 Investment<br>& Budget Overview</h2>
+            <div class="accent-line"></div>
+        </div>
+        
+        <div class="main-content">
+            <div class="table-column">
+                <table class="budget-table">
+                    <thead>
+                        <tr>
+                            <th>Allocation Category</th>
+                            <th class="amount">Amount (USD)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Land Acquisition (17.71 Acres)</td>
+                            <td class="amount">$470,000</td>
+                        </tr>
+                        <tr>
+                            <td>Field Construction (Fields 1, 2, 3)</td>
+                            <td class="amount">$935,900</td>
+                        </tr>
+                        <tr>
+                            <td>Main Building (30x140)</td>
+                            <td class="amount">$235,000</td>
+                        </tr>
+                        <tr>
+                            <td>Lighting Systems</td>
+                            <td class="amount">$130,800</td>
+                        </tr>
+                        <tr>
+                            <td>Preferred Return (Construction Phase)</td>
+                            <td class="amount">$193,337</td>
+                        </tr>
+                        <tr>
+                            <td>Equipment, Infrastructure & Other</td>
+                            <td class="amount">$393,580</td>
+                        </tr>
+                        <tr>
+                            <td>Contingency Fund</td>
+                            <td class="amount">$141,517</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td>Total Capital Requirement</td>
+                            <td class="amount">$2,500,133</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="highlights-section">
+                <div class="highlight-box">
+                    <div class="highlight-title">Asset Backing</div>
+                    <div class="highlight-text">
+                        Investors hold <b>70% ownership shares</b> of the LLC which owns the facility, land, and all improvements.
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-title">Financial Prudence</div>
+                    <div class="highlight-text">
+                        Budget includes a <b>$141k contingency</b> and pre-funded preferred returns to ensure stability during the 12-month build-out.
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-title">Strategic Value</div>
+                    <div class="highlight-text">
+                        The investment secures a prime <b>17.71-acre</b> location in the high-growth North Texas corridor.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+        <a href="slide-06.html" class="nav-btn" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></a>
+        <a href="slide-08.html" class="nav-btn" aria-label="Next slide"><i class="fas fa-chevron-right"></i></a>
+    </div>
+</body>
+</html>

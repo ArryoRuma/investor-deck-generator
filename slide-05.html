@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="manus.css" rel="stylesheet">
+    <style>
+      .image-side {
+        width: 600px;
+        height: 720px;
+        position: relative;
+      }
+      .image-side img {
+        width: 600px;
+        height: 720px;
+        object-fit: cover;
+      }
+      .content-side {
+        flex: 1;
+        padding-top: 60px; /* keep upper padding of title */
+        padding-left: 60px;
+        padding-right: 60px;
+        display: flex;
+        flex-direction: column;
+      }
+      h2 {
+        font-size: 44px;
+        margin-bottom: 12px; /* reduced spacing after title */
+      }
+      .phase-container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px; /* reduced gap between phase blocks */
+      }
+      .phase-block {
+        padding-top: 4px; /* shrink inner padding */
+      }
+      .phase-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .phase-number {
+        background: var(--color-accent);
+        color: var(--color-white);
+        font-family: var(--font-display);
+        font-weight: 800;
+        font-size: 24px;
+        width: 120px;
+        height: 36px; /* slightly reduced but still fits font */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+      }
+      .phase-title {
+        font-family: var(--font-display);
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--color-primary);
+      }
+      .phase-list {
+        list-style: none;
+        padding-left: 20px;
+        border-left: 3px solid var(--color-secondary);
+      }
+      .phase-list li {
+        font-size: 18px;
+        color: var(--color-text);
+        margin-bottom: 4px; /* reduced spacing between list items */
+        line-height: 1.4;
+      }
+      .efficiency-note {
+        margin-top: auto;
+        padding-top: 8px; /* reduced */
+        padding-bottom: 12px; /* reduced */
+        font-style: italic;
+        color: var(--color-text-light);
+        font-size: 18px;
+        border-top: 1px solid var(--color-border);
+      }
+      .efficiency-note strong {
+        color: var(--color-accent);
+      }
+    </style>
+</head>
+<body>
+    <div class="presentation-frame">
+    <div class="slide-container">
+        <div class="image-side">
+            <img src="/images/slide5-2.png" alt="Multi-phase Sports Complex Aerial">
+        </div>
+        <div class="content-side">
+            <h2>Strategic Multi-Phase<br>Development</h2>
+            
+            <div class="phase-container">
+                <div class="phase-block">
+                    <div class="phase-header">
+                        <div class="phase-number">PHASE 1</div>
+                        <div class="phase-title">Foundation & Launch</div>
+                    </div>
+                    <ul class="phase-list">
+                        <li>Construction of initial 3 professional-grade fields</li>
+                        <li>Development of core infrastructure & parking</li>
+                        <li>Launch of revenue-generating Cages & Concessions</li>
+                        <li>Remodel of existing facility house for operations</li>
+                    </ul>
+                </div>
+
+                <div class="phase-block">
+                    <div class="phase-header">
+                        <div class="phase-number">PHASE 2</div>
+                        <div class="phase-title">Expansion & Scale</div>
+                    </div>
+                    <ul class="phase-list">
+                        <li>Addition of Fields 4, 5, and 6 to double capacity</li>
+                        <li>Enhanced tournament hosting capabilities</li>
+                        <li>Increased weekday rental throughput</li>
+                        <li>Full stabilization of the 17.71-acre complex</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="efficiency-note">
+                <strong>Capital Efficiency:</strong> Phase 2 will be funded through a cash-out refinance of the Phase 1 asset, minimizing additional equity requirements.
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+        <a href="slide-04.html" class="nav-btn" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></a>
+        <a href="slide-06.html" class="nav-btn" aria-label="Next slide"><i class="fas fa-chevron-right"></i></a>
+    </div>
+</body>
+</html>

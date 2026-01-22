@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use of Funds - Dugout Howe</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="manus.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <style>
+      /* Slide-specific styles */
+      .slide-container {
+        flex-direction: column;
+      }
+      
+      .header-section {
+        padding-bottom: 10px;
+      }
+      
+      h2 {
+        font-size: 48px;
+      }
+      
+      h2 span {
+        color: var(--color-accent);
+      }
+      
+      .main-content {
+        display: flex;
+        gap: 60px;
+        padding: 0px 80px 20px;
+      }
+      
+      /* Chart Panel */
+      .chart-panel {
+        flex: 0 0 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      
+      .total-badge {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        background: var(--color-white);
+        padding: 2rem;
+        border-radius: 50%;
+        box-shadow: var(--shadow-soft);
+        width: 220px;
+        height: 220px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+      }
+      
+      .total-label {
+        color: var(--color-text-light);
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 8px;
+      }
+      
+      .total-amount {
+        font-family: var(--font-display);
+        font-size: 40px;
+        font-weight: 800;
+        color: var(--color-accent);
+        line-height: 1;
+      }
+      
+      .total-subtext {
+        font-size: 11px;
+        color: var(--color-text-light);
+        margin-top: 12px;
+      }
+      
+      /* Table Panel */
+      .table-panel {
+        flex: 1.2;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 10px;
+      }
+      
+      .budget-table-container {
+        background: var(--color-white);
+        border-radius: 12px;
+        box-shadow: var(--shadow-medium);
+        overflow: hidden;
+        border: 1px solid var(--color-border);
+      }
+      
+      .budget-table-header {
+        background: var(--color-bg-light);
+        padding: 10px 24px;
+        border-bottom: 1px solid var(--color-border);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .budget-table-header span {
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--color-text-light);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      
+      .budget-row {
+        display: flex;
+        align-items: center;
+        padding: 10px 24px;
+        border-bottom: 1px solid var(--color-bg-light);
+        transition: background-color 0.2s;
+      }
+      
+      .budget-row:hover {
+        background-color: var(--color-bg-hover);
+      }
+      
+      .budget-row:last-child {
+        border-bottom: none;
+      }
+      
+      .row-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 16px;
+        font-size: 18px;
+      }
+      
+      .category-name {
+        flex: 1;
+        font-weight: 600;
+        color: var(--color-text-medium);
+      }
+      
+      .category-subtext {
+        font-size: 12px;
+        color: var(--color-text-light);
+        font-weight: 400;
+        display: block;
+      }
+      
+      .budget-amount {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 20px;
+        color: var(--color-text-dark);
+        text-align: right;
+        min-width: 120px;
+      }
+      
+      .percentage-bar {
+        width: 60px;
+        height: 4px;
+        background-color: var(--color-border);
+        margin-left: 24px;
+        border-radius: 2px;
+        overflow: hidden;
+      }
+      
+      .percentage-fill {
+        height: 100%;
+        background-color: var(--color-accent);
+      }
+      
+      .budget-total {
+        padding: 14px 24px;
+        background: var(--color-bg-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid var(--color-border);
+      }
+      
+      .budget-total-label {
+        font-weight: 700;
+        color: var(--color-text);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      
+      .budget-total-amount {
+        font-family: var(--font-display);
+        font-weight: 800;
+        font-size: 28px;
+        color: var(--color-accent);
+      }
+    </style>
+</head>
+<body>
+    <div class="presentation-frame">
+    <div class="slide-container">
+        <div class="header-section">
+            <h2>Capital Allocation &<br><span>Use of Funds</span></h2>
+            <div class="accent-line"></div>
+        </div>
+        
+        <div class="main-content">
+            <!-- Left Panel: Chart -->
+            <div class="chart-panel">
+                <div class="total-badge">
+                    <p class="total-label">Total Raise</p>
+                    <p class="total-amount">$2.5M</p>
+                    <p class="total-subtext">17.71 Acres • 3 Fields</p>
+                </div>
+                <div id="budgetChart" style="width: 100%; height: 420px;"></div>
+            </div>
+            
+            <!-- Right Panel: Budget Table -->
+            <div class="table-panel">
+                <div class="budget-table-container">
+                    <!-- Header Row -->
+                    <div class="budget-table-header">
+                        <span>Expense Category</span>
+                        <span>Amount</span>
+                    </div>
+                    
+                    <!-- Row 1: Fields -->
+                    <div class="budget-row" style="border-left: 4px solid var(--color-accent);">
+                        <div class="row-icon" style="background-color: var(--color-accent-bg); color: var(--color-accent);">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <div class="category-name">
+                            Field Construction
+                            <span class="category-subtext">3 Fields (Turf Infields, Grass Outfields, Fencing)</span>
+                        </div>
+                        <div class="budget-amount">$935,900</div>
+                        <div class="percentage-bar">
+                            <div class="percentage-fill" style="width: 37%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 2: Land -->
+                    <div class="budget-row" style="border-left: 4px solid var(--color-primary);">
+                        <div class="row-icon" style="background-color: var(--color-primary-bg); color: var(--color-primary);">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="category-name">
+                            Land Acquisition
+                            <span class="category-subtext">491 Morrison Rd (17.71 Acres)</span>
+                        </div>
+                        <div class="budget-amount">$470,000</div>
+                        <div class="percentage-bar">
+                            <div class="percentage-fill" style="width: 19%; background-color: var(--color-primary);"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 3: Buildings -->
+                    <div class="budget-row" style="border-left: 4px solid var(--color-category-1);">
+                        <div class="row-icon" style="background-color: var(--color-category-1-bg); color: var(--color-category-1);">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <div class="category-name">
+                            Buildings &amp; Structures
+                            <span class="category-subtext">Main Building (30x140), House Remodel, Cages</span>
+                        </div>
+                        <div class="budget-amount">$307,000</div>
+                        <div class="percentage-bar">
+                            <div class="percentage-fill" style="width: 12%; background-color: var(--color-category-1);"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 4: Infrastructure -->
+                    <div class="budget-row" style="border-left: 4px solid var(--color-category-2);">
+                        <div class="row-icon" style="background-color: var(--color-category-2-bg); color: var(--color-category-2);">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="category-name">
+                            Infrastructure &amp; Utilities
+                            <span class="category-subtext">Lights ($130k), Paving, Septic, Water, Electric</span>
+                        </div>
+                        <div class="budget-amount">$359,179</div>
+                        <div class="percentage-bar">
+                            <div class="percentage-fill" style="width: 14%; background-color: var(--color-category-2);"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 5: Reserves & Financing -->
+                    <div class="budget-row" style="border-left: 4px solid var(--color-category-3);">
+                        <div class="row-icon" style="background-color: var(--color-category-3-bg); color: var(--color-category-3);">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        <div class="category-name">
+                            Reserves &amp; Financing
+                            <span class="category-subtext">Preferred Return ($193k), Contingency ($141k), Equip.</span>
+                        </div>
+                        <div class="budget-amount">$428,054</div>
+                        <div class="percentage-bar">
+                            <div class="percentage-fill" style="width: 17%; background-color: var(--color-category-3);"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Total Row -->
+                    <div class="budget-total">
+                        <span class="budget-total-label">Total Project Budget</span>
+                        <span class="budget-total-amount">$2,500,133</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var chartDom = document.getElementById('budgetChart');
+            var myChart = echarts.init(chartDom);
+            
+            // Get CSS variable colors
+            const styles = getComputedStyle(document.documentElement);
+            const colorAccent = styles.getPropertyValue('--color-accent').trim();
+            const colorPrimary = styles.getPropertyValue('--color-primary').trim();
+            const colorCategory1 = styles.getPropertyValue('--color-category-1').trim();
+            const colorCategory2 = styles.getPropertyValue('--color-category-2').trim();
+            const colorCategory3 = styles.getPropertyValue('--color-category-3').trim();
+            const colorWhite = styles.getPropertyValue('--color-white').trim();
+            
+            var option = {
+                color: [colorAccent, colorPrimary, colorCategory1, colorCategory2, colorCategory3],
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params) {
+                        return params.name + ': $' + params.value.toLocaleString();
+                    }
+                },
+                series: [
+                    {
+                        name: 'Use of Funds',
+                        type: 'pie',
+                        radius: ['60%', '80%'],
+                        avoidLabelOverlap: false,
+                        itemStyle: {
+                            borderRadius: 10,
+                            borderColor: colorWhite,
+                            borderWidth: 2
+                        },
+                        label: {
+                            show: false,
+                            position: 'center'
+                        },
+                        emphasis: {
+                            label: {
+                                show: false
+                            },
+                            scale: true,
+                            scaleSize: 10
+                        },
+                        labelLine: {
+                            show: false
+                        },
+                        data: [
+                            { value: 935900, name: 'Fields' },
+                            { value: 470000, name: 'Land' },
+                            { value: 307000, name: 'Buildings' },
+                            { value: 359179, name: 'Infrastructure' },
+                            { value: 428054, name: 'Reserves & Financing' }
+                        ]
+                    }
+                ]
+            };
+
+            myChart.setOption(option);
+        });
+    </script>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+        <a href="slide-09.html" class="nav-btn" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></a>
+        <a href="slide-10.html" class="nav-btn" aria-label="Next slide"><i class="fas fa-chevron-right"></i></a>
+    </div>
+</body>
+</html>

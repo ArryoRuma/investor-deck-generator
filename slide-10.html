@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="manus.css" rel="stylesheet">
+    <style>
+      .image-side {
+        width: 600px;
+        height: 720px;
+        position: relative;
+        background: var(--color-primary);
+      }
+      .image-side img {
+        width: 600px;
+        height: 720px;
+        object-fit: cover;
+        opacity: 0.8;
+      }
+      .content-side {
+        flex: 1;
+        padding-top: 80px; /* keep title top padding */
+        padding-left: 60px;
+        padding-right: 60px;
+        display: flex;
+        flex-direction: column;
+        background: var(--color-white);
+      }
+      h2 {
+        margin-bottom: 20px;
+      }
+      .accent-line {
+        width: 100px;
+        margin-bottom: 20px; /* reduced */
+      }
+      .cta-text {
+        font-size: 22px;
+        color: var(--color-text);
+        font-weight: 600;
+        margin-bottom: 20px; /* reduced */
+        line-height: 1.4;
+      }
+      .next-steps {
+        margin-bottom: 20px; /* reduced */
+      }
+      .step-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px; /* reduced */
+        padding-top: 4px; /* reduced */
+      }
+      .step-icon {
+        width: 36px;
+        height: 36px;
+        background: var(--color-secondary);
+        color: var(--color-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        margin-right: 16px;
+        font-family: var(--font-display);
+      }
+      .step-label {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--color-primary);
+        text-transform: uppercase;
+      }
+      .contact-info {
+        /* removed margin-top:auto to prevent pushing to page bottom */
+        padding-top: 20px; /* reduced */
+        padding-bottom: 20px; /* reduced */
+        border-top: 2px solid var(--color-border);
+      }
+      .contact-title {
+        font-family: var(--font-display);
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--color-accent);
+        margin-bottom: 12px;
+        text-transform: uppercase;
+      }
+      .contact-details {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--color-primary);
+      }
+      .contact-details span {
+        display: block;
+        font-size: 18px;
+        color: var(--color-text-light);
+        font-weight: 400;
+        margin-top: 5px;
+      }
+    </style>
+</head>
+<body>
+    <div class="presentation-frame">
+    <div class="slide-container">
+        <div class="image-side">
+            <img src="/images/slide10.jpg" alt="Modern Training Facility">
+        </div>
+        <div class="content-side">
+            <h2>Join Us in Shaping<br>the Future</h2>
+            <div class="accent-line"></div>
+            
+            <p class="cta-text">
+                Partner with an experienced operator in a high-demand, high-margin industry. Secure your position in the Dugout Howe Complex today.
+            </p>
+            
+            <div class="next-steps">
+                <div class="step-item">
+                    <div class="step-icon">1</div>
+                    <div class="step-label">Review Detailed Financials</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">2</div>
+                    <div class="step-label">Examine Site &amp; Phase Plans</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">3</div>
+                    <div class="step-label">Execute Investment Agreement</div>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-title">Contact Information</div>
+                <div class="contact-details">
+                    Tim Truman
+                    <span>Founder &amp; Operator, Pine Tar Sports</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+        <a href="slide-09-1.html" class="nav-btn" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></a>
+        <a href="#" class="nav-btn" style="display: none;" aria-label="Next slide"><i class="fas fa-chevron-right"></i></a>
+    </div>
+</body>
+</html>

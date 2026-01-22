@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="manus.css" rel="stylesheet">
+    <style>
+      .slide-container { 
+        flex-direction: column;
+      }
+      .timeline-container {
+        padding-top: 40px;
+        padding-left: 80px;
+        padding-right: 80px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+      }
+      .timeline-step {
+        width: 22%;
+        position: relative;
+        padding-top: 20px;
+      }
+      .time-label {
+        font-family: var(--font-display);
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--color-accent);
+        margin-bottom: 10px;
+      }
+      .step-title {
+        font-family: var(--font-display);
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--color-primary);
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        min-height: 44px;
+      }
+      .step-desc {
+        font-size: 16px;
+        color: var(--color-text);
+        line-height: 1.5;
+      }
+      .return-summary {
+        margin-top: auto;
+        padding-top: 60px;
+        padding-bottom: 80px;
+        padding-left: 80px;
+        padding-right: 80px;
+        background: var(--color-bg-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .summary-item {
+        text-align: center;
+      }
+      .summary-value {
+        font-family: var(--font-display);
+        font-size: 42px;
+        font-weight: 800;
+        color: var(--color-primary);
+      }
+      .summary-label {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--color-text-light);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 5px;
+      }
+      .exit-strategy {
+        width: 40%;
+        border-left: 4px solid var(--color-secondary);
+        padding-left: 30px;
+      }
+      .exit-title {
+        font-family: var(--font-display);
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--color-accent);
+        margin-bottom: 10px;
+      }
+      .exit-text {
+        font-size: 16px;
+        color: var(--color-text);
+        line-height: 1.4;
+      }
+    </style>
+</head>
+<body>
+    <div class="presentation-frame">
+    <div class="slide-container">
+        <div class="header-section">
+            <h2>Investor<br>Returns & Timeline</h2>
+            <div class="accent-line"></div>
+        </div>
+
+        <div class="timeline-container">
+            <div class="timeline-step">
+                <div class="time-label">0-12 Months</div>
+                <div class="step-title">Construction Phase</div>
+                <div class="step-desc">8% Preferred return paid monthly during build-out. Facility opens for business at Month 12.</div>
+            </div>
+            <div class="timeline-step">
+                <div class="time-label">Month 18</div>
+                <div class="step-title">Strategic Refinance</div>
+                <div class="step-desc">Cash-out refinance returns 50% of initial investment while funding Phase 2 expansion.</div>
+            </div>
+            <div class="timeline-step">
+                <div class="time-label">Month 24</div>
+                <div class="step-title">Capital Distribution</div>
+                <div class="step-desc">$130k distribution to investors. 9% Preferred return continues on outstanding balance.</div>
+            </div>
+            <div class="timeline-step">
+                <div class="time-label">30-36 Months</div>
+                <div class="step-title">Full Payback</div>
+                <div class="step-desc">Investors paid in full. Asset produces $600k triple net profit annually with retained equity.</div>
+            </div>
+        </div>
+
+        <div class="return-summary">
+            <div class="summary-item">
+                <div class="summary-value">8-9%</div>
+                <div class="summary-label">Preferred Return</div>
+            </div>
+            <div class="summary-item">
+                <div class="summary-value">30 Mo.</div>
+                <div class="summary-label">Target Payback</div>
+            </div>
+            <div class="exit-strategy">
+                <div class="exit-title">Refinance Exit Strategy</div>
+                <div class="exit-text">Our model prioritizes early capital return through asset stabilization and bank refinancing, significantly de-risking the investment.</div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+        <a href="slide-07.html" class="nav-btn" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></a>
+        <a href="slide-09.html" class="nav-btn" aria-label="Next slide"><i class="fas fa-chevron-right"></i></a>
+    </div>
+</body>
+</html>
