@@ -539,12 +539,16 @@ h2 {
   }
 
   /* Image sections */
-  .image-section {
+  .image-section,
+  .right-image,
+  .image-side {
     width: 100%;
     height: 400px;
   }
 
-  .image-section img {
+  .image-section img,
+  .right-image img,
+  .image-side img {
     width: 100%;
     height: 400px;
   }
@@ -718,12 +722,14 @@ h2 {
 
   /* Image adjustments */
   .right-image,
-  .image-section {
+  .image-section,
+  .image-side {
     height: 350px;
   }
 
   .right-image img,
-  .image-section img {
+  .image-section img,
+  .image-side img {
     height: 350px;
   }
 
