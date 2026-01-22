@@ -39,6 +39,7 @@
         justify-content: center;
         align-items: center;
         position: relative;
+        order: 1; /* Chart appears first (left) on desktop */
       }
       
       .total-badge {
@@ -90,6 +91,7 @@
         flex-direction: column;
         justify-content: flex-start;
         padding-top: 10px;
+        order: 2; /* Table appears second (right) on desktop */
       }
       
       .budget-table-container {
@@ -211,7 +213,7 @@
       /* Mobile Responsive Styles */
       @media screen and (max-width: 768px) {
         .main-content {
-          flex-direction: column-reverse;
+          flex-direction: column;
           padding: 0 20px 20px;
           gap: 30px;
         }
@@ -219,11 +221,13 @@
         .chart-panel {
           flex: 1;
           width: 100%;
+          order: 0; /* Reset order for mobile - follows DOM order */
         }
         
         .table-panel {
           flex: 1;
           width: 100%;
+          order: 0; /* Reset order for mobile - follows DOM order */
         }
         
         .total-badge {
@@ -372,17 +376,7 @@
         </div>
         
         <div class="main-content">
-            <!-- Left Panel: Chart -->
-            <div class="chart-panel">
-                <div class="total-badge">
-                    <p class="total-label">Total Raise</p>
-                    <p class="total-amount">$2.5M</p>
-                    <p class="total-subtext">17.71 Acres • 3 Fields</p>
-                </div>
-                <div id="budgetChart"></div>
-            </div>
-            
-            <!-- Right Panel: Budget Table -->
+            <!-- Budget Table Panel -->
             <div class="table-panel">
                 <div class="budget-table-container">
                     <!-- Header Row -->
@@ -472,6 +466,16 @@
                         <span class="budget-total-amount">$2,500,133</span>
                     </div>
                 </div>
+            </div>
+            
+            <!-- Chart Panel -->
+            <div class="chart-panel">
+                <div class="total-badge">
+                    <p class="total-label">Total Raise</p>
+                    <p class="total-amount">$2.5M</p>
+                    <p class="total-subtext">17.71 Acres • 3 Fields</p>
+                </div>
+                <div id="budgetChart"></div>
             </div>
         </div>
     </div>
