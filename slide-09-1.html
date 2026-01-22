@@ -203,6 +203,11 @@
         color: var(--color-accent);
       }
       
+      #budgetChart {
+        width: 100%;
+        height: 420px;
+      }
+      
       /* Mobile Responsive Styles */
       @media screen and (max-width: 768px) {
         .main-content {
@@ -374,7 +379,7 @@
                     <p class="total-amount">$2.5M</p>
                     <p class="total-subtext">17.71 Acres • 3 Fields</p>
                 </div>
-                <div id="budgetChart" style="width: 100%; height: 420px;"></div>
+                <div id="budgetChart"></div>
             </div>
             
             <!-- Right Panel: Budget Table -->
@@ -531,6 +536,11 @@
             };
 
             myChart.setOption(option);
+            
+            // Handle window resize for responsive chart
+            window.addEventListener('resize', function() {
+                myChart.resize();
+            });
         });
     </script>
 
