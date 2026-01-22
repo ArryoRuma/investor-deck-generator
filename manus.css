@@ -522,18 +522,6 @@ h2 {
     width: 100%;
   }
 
-  .right-image {
-    width: 100%;
-    height: 400px;
-    clip-path: none;
-    flex: none;
-  }
-
-  .right-image img {
-    width: 100%;
-    height: 400px;
-  }
-
   .diagonal-accent {
     display: none;
   }
@@ -543,14 +531,14 @@ h2 {
   .right-image,
   .image-side {
     width: 100%;
-    height: 400px;
+    height: auto;
   }
 
   .image-section img,
   .right-image img,
   .image-side img {
     width: 100%;
-    height: 400px;
+    height: auto;
   }
 
   /* Grids become single column */
@@ -724,13 +712,14 @@ h2 {
   .right-image,
   .image-section,
   .image-side {
-    height: 350px;
+    height: auto;
+    clip-path: none;
   }
 
   .right-image img,
   .image-section img,
   .image-side img {
-    height: 350px;
+    height: auto;
   }
 
   /* Navigation */
@@ -800,13 +789,9 @@ h2 {
     clip-path: none !important;
   }
 
-  .image-side {
-    height: 250px !important;
-  }
-
   .image-side img {
     width: 100% !important;
-    height: 250px !important;
+    height: auto !important;
   }
 
   /* Headers for dark slides */
@@ -914,13 +899,13 @@ h2 {
   .right-image,
   .image-section,
   .image-side {
-    height: 300px !important;
+    height: auto !important;
   }
 
   .right-image img,
   .image-section img,
   .image-side img {
-    height: 300px !important;
+    height: auto !important;
   }
 
   /* Problems/benefits */
