@@ -7,6 +7,31 @@
     <link href="manus.css" rel="stylesheet">
     <style>
       /* Slide-specific styles - all common styles now in manus.css */
+      .metric-card {
+        overflow: visible; /* Ensure numbers don't clip */
+      }
+      .financial-highlight {
+        margin-top: auto;
+        padding-top: 40px;
+        padding-bottom: 60px;
+        border-top: 2px solid var(--color-secondary);
+      }
+      .financial-text {
+        font-size: 22px;
+        color: var(--color-text);
+        font-weight: 600;
+        line-height: 1.8;
+      }
+      .financial-text .revenue-amount {
+        color: var(--color-accent);
+        font-weight: 700;
+      }
+      .financial-text .profit-amount {
+        color: #10b981; /* Green color for profit */
+        font-weight: 700;
+        display: block;
+        margin-top: 8px;
+      }
     </style>
 </head>
 <body>
@@ -18,7 +43,6 @@
         <div class="content-section">
             <h2>Proven Track Record<br>of Growth</h2>
             <div class="accent-line"></div>
-            <!--TODO: verify that the numbers aren't clipping in their boxes.-->
             <div class="metrics-grid">
                 <div class="metric-card">
                     <div class="metric-value">2014</div>
@@ -41,10 +65,9 @@
                     <div class="metric-desc">Participating in our events this year alone.</div>
                 </div>
             </div>
-            <!--TODO: make the net profit number green, instead of red. I also want it to be placed directly under the $1.5M+ -->
             <div class="financial-highlight">
-                <p class="financial-text">Current Operations: <span>$1.5M+</span> 
-                    <br> Gross Revenue | <span> $810K+</span> Net Profit</p>
+                <p class="financial-text">Current Operations: <span class="revenue-amount">$1.5M+</span> Gross Revenue
+                    <span class="profit-amount">$810K+ Net Profit</span></p>
             </div>
         </div>
     </div>

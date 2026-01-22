@@ -11,11 +11,13 @@
         position: relative;
         justify-content: center;
         align-items: center;
-        background: linear-gradient(135deg, var(--color-primary) 0%, #003d7a 100%);
+        background: linear-gradient(135deg, rgba(0, 45, 98, 0.9) 0%, rgba(0, 61, 122, 0.9) 100%), url('images/index.png');
+        background-size: cover;
+        background-position: center;
       }
       .center-content {
         text-align: center;
-        padding: 60px;
+        padding: 40px 60px;
         max-width: 900px;
       }
       .deck-title {
@@ -25,6 +27,7 @@
         color: var(--color-white);
         line-height: 1.1;
         margin-bottom: 30px;
+        padding-top: 20px;
         text-transform: uppercase;
       }
       .deck-subtitle {
@@ -50,8 +53,9 @@
         margin: 40px auto;
       }
       .presenter-section {
-        margin-top: 80px;
-        padding-top: 40px;
+        margin-top: 60px;
+        padding-top: 30px;
+        padding-bottom: 20px;
         border-top: 2px solid rgba(255, 255, 255, 0.3);
       }
       .presenter-label {
@@ -81,7 +85,6 @@
     <div class="presentation-frame">
     <div class="slide-container">
         <div class="center-content">
-          <!--TODO: fix deck-title padding above, fix presenter section padding on bottom so all content fits nicely, also reconfigure the style for this page to include a vertical image from../manus/images/index.png .-->
             <h1 class="deck-title">Dugout Howe<br>Complex</h1>
             <div class="deck-accent-line"></div>
             <div class="deck-subtitle">Investment Opportunity</div>
