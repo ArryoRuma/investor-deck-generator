@@ -11,10 +11,9 @@
       }
       .header {
         background: var(--color-primary);
-        padding-top: 60px;
-        padding-left: 60px;
-        padding-right: 60px;
-        height: 200px;
+        padding: 40px 60px 20px 60px;
+        height: auto;
+        min-height: 160px;
       }
       h2 {
         color: var(--color-white);
@@ -27,14 +26,14 @@
         flex: 1;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 40px;
-        padding-top: 40px;
-        padding-left: 60px;
-        padding-right: 60px;
+        grid-template-rows: repeat(2, auto);
+        gap: 25px;
+        padding: 30px 60px 40px 60px;
+        overflow-y: auto;
       }
       .revenue-item {
-        padding-top: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
       }
       .revenue-title {
         font-family: var(--font-display);
@@ -52,15 +51,15 @@
       }
       .revenue-metric {
         font-family: var(--font-display);
-        font-size: 36px;
+        font-size: 32px;
         font-weight: 800;
         color: var(--color-accent);
-        margin-bottom: 10px;
+        margin-bottom: 8px;
       }
       .revenue-detail {
-        font-size: 18px;
+        font-size: 16px;
         color: var(--color-text);
-        line-height: 1.5;
+        line-height: 1.4;
       }
       .revenue-detail span {
         font-weight: 600;
@@ -68,7 +67,6 @@
       }
     </style>
 </head>
-<!--TODO: Re align and format the revenue grid for better visual balance and so everything stays on the page and isnt cut off.-->
 <body>
     <div class="presentation-frame">
     <div class="slide-container">
