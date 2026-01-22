@@ -524,14 +524,14 @@ h2 {
 
   .right-image {
     width: 100%;
-    height: 300px;
+    height: 400px;
     clip-path: none;
     flex: none;
   }
 
   .right-image img {
     width: 100%;
-    height: 300px;
+    height: 400px;
   }
 
   .diagonal-accent {
@@ -541,12 +541,12 @@ h2 {
   /* Image sections */
   .image-section {
     width: 100%;
-    height: 300px;
+    height: 400px;
   }
 
   .image-section img {
     width: 100%;
-    height: 300px;
+    height: 400px;
   }
 
   /* Grids become single column */
@@ -585,7 +585,7 @@ h2 {
   }
 
   .slide-container {
-    min-height: 600px;
+    min-height: 700px;
   }
 
   /* Typography */
@@ -719,12 +719,12 @@ h2 {
   /* Image adjustments */
   .right-image,
   .image-section {
-    height: 250px;
+    height: 350px;
   }
 
   .right-image img,
   .image-section img {
-    height: 250px;
+    height: 350px;
   }
 
   /* Navigation */
@@ -843,7 +843,7 @@ h2 {
   }
 
   .slide-container {
-    min-height: 500px;
+    min-height: 600px;
   }
 
   /* Typography */
@@ -908,13 +908,13 @@ h2 {
   .right-image,
   .image-section,
   .image-side {
-    height: 200px !important;
+    height: 300px !important;
   }
 
   .right-image img,
   .image-section img,
   .image-side img {
-    height: 200px !important;
+    height: 300px !important;
   }
 
   /* Problems/benefits */
