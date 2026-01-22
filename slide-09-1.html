@@ -202,6 +202,160 @@
         font-size: 28px;
         color: var(--color-accent);
       }
+      
+      /* Mobile Responsive Styles */
+      @media screen and (max-width: 768px) {
+        .main-content {
+          flex-direction: column-reverse;
+          padding: 0 20px 20px;
+          gap: 30px;
+        }
+        
+        .chart-panel {
+          flex: 1;
+          width: 100%;
+        }
+        
+        .table-panel {
+          flex: 1;
+          width: 100%;
+        }
+        
+        .total-badge {
+          width: 180px;
+          height: 180px;
+          padding: 1.5rem;
+        }
+        
+        .total-label {
+          font-size: 11px;
+        }
+        
+        .total-amount {
+          font-size: 32px;
+        }
+        
+        .total-subtext {
+          font-size: 10px;
+        }
+        
+        #budgetChart {
+          height: 350px !important;
+        }
+        
+        .budget-row {
+          padding: 8px 16px;
+        }
+        
+        .row-icon {
+          width: 35px;
+          height: 35px;
+          font-size: 16px;
+          margin-right: 12px;
+        }
+        
+        .category-name {
+          font-size: 14px;
+        }
+        
+        .category-subtext {
+          font-size: 11px;
+        }
+        
+        .budget-amount {
+          font-size: 16px;
+          min-width: 90px;
+        }
+        
+        .percentage-bar {
+          width: 40px;
+          margin-left: 12px;
+        }
+        
+        .budget-total {
+          padding: 12px 16px;
+        }
+        
+        .budget-total-label {
+          font-size: 13px;
+        }
+        
+        .budget-total-amount {
+          font-size: 22px;
+        }
+      }
+      
+      @media screen and (max-width: 480px) {
+        .main-content {
+          padding: 0 15px 15px;
+          gap: 20px;
+        }
+        
+        .total-badge {
+          width: 150px;
+          height: 150px;
+          padding: 1rem;
+        }
+        
+        .total-label {
+          font-size: 10px;
+        }
+        
+        .total-amount {
+          font-size: 26px;
+        }
+        
+        .total-subtext {
+          font-size: 9px;
+        }
+        
+        #budgetChart {
+          height: 300px !important;
+        }
+        
+        .budget-row {
+          padding: 6px 12px;
+          flex-wrap: wrap;
+        }
+        
+        .row-icon {
+          width: 30px;
+          height: 30px;
+          font-size: 14px;
+          margin-right: 10px;
+        }
+        
+        .category-name {
+          font-size: 12px;
+          flex: 1;
+          min-width: 120px;
+        }
+        
+        .category-subtext {
+          font-size: 10px;
+        }
+        
+        .budget-amount {
+          font-size: 14px;
+          min-width: 80px;
+        }
+        
+        .percentage-bar {
+          display: none;
+        }
+        
+        .budget-total {
+          padding: 10px 12px;
+        }
+        
+        .budget-total-label {
+          font-size: 12px;
+        }
+        
+        .budget-total-amount {
+          font-size: 18px;
+        }
+      }
     </style>
 </head>
 <body>

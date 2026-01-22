@@ -88,6 +88,107 @@
         color: var(--color-text);
         line-height: 1.4;
       }
+      
+      /* Mobile Responsive Styles */
+      @media screen and (max-width: 768px) {
+        .timeline-container {
+          flex-direction: column;
+          padding: 20px;
+          gap: 30px;
+        }
+        
+        .timeline-step {
+          width: 100%;
+          padding-top: 10px;
+        }
+        
+        .time-label {
+          font-size: 20px;
+        }
+        
+        .step-title {
+          font-size: 16px;
+          min-height: auto;
+        }
+        
+        .step-desc {
+          font-size: 15px;
+        }
+        
+        .return-summary {
+          flex-direction: column;
+          padding: 40px 20px;
+          gap: 30px;
+        }
+        
+        .summary-item {
+          width: 100%;
+        }
+        
+        .summary-value {
+          font-size: 36px;
+        }
+        
+        .summary-label {
+          font-size: 14px;
+        }
+        
+        .exit-strategy {
+          width: 100%;
+          border-left: none;
+          border-top: 4px solid var(--color-secondary);
+          padding-left: 0;
+          padding-top: 20px;
+        }
+        
+        .exit-title {
+          font-size: 18px;
+        }
+        
+        .exit-text {
+          font-size: 15px;
+        }
+      }
+      
+      @media screen and (max-width: 480px) {
+        .timeline-container {
+          padding: 15px;
+          gap: 25px;
+        }
+        
+        .time-label {
+          font-size: 18px;
+        }
+        
+        .step-title {
+          font-size: 15px;
+        }
+        
+        .step-desc {
+          font-size: 14px;
+        }
+        
+        .return-summary {
+          padding: 30px 15px;
+          gap: 25px;
+        }
+        
+        .summary-value {
+          font-size: 30px;
+        }
+        
+        .summary-label {
+          font-size: 13px;
+        }
+        
+        .exit-title {
+          font-size: 16px;
+        }
+        
+        .exit-text {
+          font-size: 14px;
+        }
+      }
     </style>
 </head>
 <body>

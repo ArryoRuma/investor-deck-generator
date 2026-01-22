@@ -83,6 +83,72 @@
       .efficiency-note strong {
         color: var(--color-accent);
       }
+      
+      /* Mobile Responsive Styles */
+      @media screen and (max-width: 768px) {
+        .content-side {
+          padding: 30px 20px;
+        }
+        
+        h2 {
+          font-size: 28px;
+        }
+        
+        .phase-number {
+          width: 100px;
+          height: 32px;
+          font-size: 20px;
+          margin-right: 15px;
+        }
+        
+        .phase-title {
+          font-size: 20px;
+        }
+        
+        .phase-list li {
+          font-size: 16px;
+        }
+        
+        .efficiency-note {
+          font-size: 16px;
+        }
+      }
+      
+      @media screen and (max-width: 480px) {
+        .content-side {
+          padding: 20px 15px;
+        }
+        
+        h2 {
+          font-size: 24px;
+        }
+        
+        .phase-header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+        }
+        
+        .phase-number {
+          width: 90px;
+          height: 30px;
+          font-size: 18px;
+          margin-right: 0;
+        }
+        
+        .phase-title {
+          font-size: 18px;
+          min-height: auto;
+        }
+        
+        .phase-list li {
+          font-size: 14px;
+        }
+        
+        .efficiency-note {
+          font-size: 14px;
+        }
+      }
     </style>
 </head>
 <body>
