@@ -468,3 +468,501 @@ h2 {
 .nav-btn i {
   pointer-events: none;
 }
+
+/* ============================================
+   MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+/* Tablet and below (1024px and down) */
+@media screen and (max-width: 1024px) {
+  body {
+    padding: 20px;
+  }
+
+  .presentation-frame {
+    border-radius: 4px;
+  }
+
+  .slide-container {
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+    flex-direction: column !important;
+  }
+
+  /* Typography adjustments */
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  /* Header and content sections */
+  .header-section {
+    padding: 40px 40px 20px 40px;
+  }
+
+  .content-section {
+    padding: 40px;
+  }
+
+  /* Split layouts become stacked */
+  .left-content {
+    padding: 40px;
+    width: 100%;
+  }
+
+  .right-image {
+    width: 100%;
+    height: 300px;
+    clip-path: none;
+    flex: none;
+  }
+
+  .right-image img {
+    width: 100%;
+    height: 300px;
+  }
+
+  .diagonal-accent {
+    display: none;
+  }
+
+  /* Image sections */
+  .image-section {
+    width: 100%;
+    height: 300px;
+  }
+
+  .image-section img {
+    width: 100%;
+    height: 300px;
+  }
+
+  /* Grids become single column */
+  .metrics-grid,
+  .two-column-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .main-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  /* Navigation buttons */
+  .nav-buttons {
+    bottom: 15px;
+    right: 15px;
+    gap: 10px;
+  }
+
+  .nav-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+}
+
+/* Mobile phones (768px and down) */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 10px;
+    min-height: 100vh;
+  }
+
+  .slide-container {
+    min-height: 600px;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  /* Adjust specific slide elements */
+  .deck-title {
+    font-size: 42px !important;
+  }
+
+  .deck-subtitle {
+    font-size: 24px !important;
+    margin-bottom: 30px !important;
+  }
+
+  .deck-description {
+    font-size: 18px !important;
+    margin-bottom: 40px !important;
+  }
+
+  .presenter-section {
+    margin-top: 40px !important;
+  }
+
+  .presenter-details {
+    font-size: 22px !important;
+  }
+
+  .presenter-location {
+    font-size: 16px !important;
+  }
+
+  /* Content sections */
+  .header-section {
+    padding: 30px 20px 15px 20px;
+  }
+
+  .content-section {
+    padding: 30px 20px;
+  }
+
+  .left-content {
+    padding: 30px 20px;
+  }
+
+  .center-content {
+    padding: 40px 20px !important;
+  }
+
+  /* Vision and subtitles */
+  .vision,
+  .subtitle {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .opportunity {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  /* Main content */
+  .main-content {
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 20px;
+  }
+
+  /* Metrics */
+  .metric-value {
+    font-size: 32px;
+  }
+
+  .metric-label {
+    font-size: 16px;
+  }
+
+  .metric-desc {
+    font-size: 14px;
+  }
+
+  /* Revenue metrics */
+  .revenue-metric {
+    font-size: 28px;
+  }
+
+  .revenue-label {
+    font-size: 16px;
+  }
+
+  /* Problem grid becomes single column */
+  .problem-grid {
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 30px;
+  }
+
+  .problem-item {
+    width: 100%;
+  }
+
+  .problem-title {
+    font-size: 20px;
+  }
+
+  .problem-text {
+    font-size: 16px;
+  }
+
+  .icon-box {
+    font-size: 40px;
+  }
+
+  /* Tables */
+  .tiers-table {
+    font-size: 14px;
+  }
+
+  .tiers-table th,
+  .tiers-table td {
+    padding-top: 10px;
+  }
+
+  /* Image adjustments */
+  .right-image,
+  .image-section {
+    height: 250px;
+  }
+
+  .right-image img,
+  .image-section img {
+    height: 250px;
+  }
+
+  /* Navigation */
+  .nav-buttons {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  /* Benefits section */
+  .benefits-section {
+    gap: 20px;
+  }
+
+  .benefit-title {
+    font-size: 18px;
+  }
+
+  .benefit-text {
+    font-size: 16px;
+  }
+
+  /* Revenue grid for slide 6 */
+  .revenue-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 20px;
+    gap: 25px;
+  }
+
+  .revenue-title {
+    font-size: 20px;
+  }
+
+  .revenue-detail {
+    font-size: 16px;
+  }
+
+  /* Points/solutions */
+  .point {
+    gap: 15px;
+  }
+
+  .point-icon {
+    font-size: 24px;
+    width: 35px;
+  }
+
+  .point-title {
+    font-size: 18px;
+  }
+
+  .point-text {
+    font-size: 16px;
+  }
+
+  /* Specific slide adjustments */
+  .content-side,
+  .image-side {
+    width: 100% !important;
+    height: auto !important;
+    clip-path: none !important;
+  }
+
+  .image-side {
+    height: 250px !important;
+  }
+
+  .image-side img {
+    width: 100% !important;
+    height: 250px !important;
+  }
+
+  /* Headers for dark slides */
+  .header {
+    padding: 30px 20px !important;
+    height: auto !important;
+  }
+
+  /* Financial highlights */
+  .financial-highlight {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  .financial-text {
+    font-size: 18px;
+  }
+
+  /* Asset value */
+  .asset-value {
+    font-size: 20px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  /* Presenter info */
+  .presenter-name {
+    font-size: 20px;
+  }
+
+  .location {
+    font-size: 16px;
+  }
+}
+
+/* Small mobile phones (480px and down) */
+@media screen and (max-width: 480px) {
+  body {
+    padding: 5px;
+  }
+
+  .slide-container {
+    min-height: 500px;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .deck-title {
+    font-size: 32px !important;
+    line-height: 1.2 !important;
+  }
+
+  .deck-subtitle {
+    font-size: 20px !important;
+  }
+
+  .deck-description {
+    font-size: 16px !important;
+  }
+
+  /* Spacing adjustments */
+  .header-section,
+  .content-section,
+  .left-content,
+  .center-content {
+    padding: 20px 15px !important;
+  }
+
+  .main-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Metrics */
+  .metric-value {
+    font-size: 28px;
+  }
+
+  .metric-label {
+    font-size: 14px;
+  }
+
+  .revenue-metric {
+    font-size: 24px;
+  }
+
+  /* Vision/Opportunity */
+  .vision,
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .opportunity {
+    font-size: 14px;
+  }
+
+  /* Images */
+  .right-image,
+  .image-section,
+  .image-side {
+    height: 200px !important;
+  }
+
+  .right-image img,
+  .image-section img,
+  .image-side img {
+    height: 200px !important;
+  }
+
+  /* Problems/benefits */
+  .problem-title {
+    font-size: 18px;
+  }
+
+  .problem-text {
+    font-size: 14px;
+  }
+
+  .icon-box {
+    font-size: 36px;
+  }
+
+  /* Tables */
+  .tiers-table {
+    font-size: 12px;
+  }
+
+  /* Navigation */
+  .nav-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  /* Point content */
+  .point-title {
+    font-size: 16px;
+  }
+
+  .point-text {
+    font-size: 14px;
+  }
+
+  .point-icon {
+    font-size: 20px;
+    width: 30px;
+  }
+
+  /* Revenue items */
+  .revenue-title {
+    font-size: 18px;
+  }
+
+  .revenue-detail {
+    font-size: 14px;
+  }
+
+  /* Presenter section */
+  .presenter-details {
+    font-size: 18px !important;
+  }
+
+  .presenter-location {
+    font-size: 14px !important;
+  }
+}
